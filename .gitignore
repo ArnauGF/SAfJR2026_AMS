@@ -2,7 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
-
 /.quarto/
+
 **/*.quarto_ipynb
 _site/git rm -r --cached .quarto _site _freeze
