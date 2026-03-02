@@ -13,7 +13,7 @@ format:
 
 -   [Time-to-event and longitudinal data]{style="color:#00BFFF;"} are fundamental in health-related studies
 -   A significant feature is its [temporal]{style="color:#00BFFF;"} dimension, allowing for [dynamic predictions]{style="color:#00BFFF;"}
--   These predictions have demonstrated utility in [precision medicime]{style="color:#00BFFF;"}
+-   These predictions have demonstrated utility in [precision medicine]{style="color:#00BFFF;"}
 
 ## Context and motivation
 
