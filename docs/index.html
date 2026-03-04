@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-inputfd287e7aef973453</title>
+  <title>quarto-input1a9c983aac748799</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,28 +127,45 @@
     <div class="slides">
 
 
-<section id="context-and-motivation" class="slide level2">
-<h2>Context and motivation</h2>
+<section id="cover" class="slide level2">
+<h2>Cover</h2>
 <ul>
-<li><span style="color:#00BFFF;">Time-to-event and longitudinal data</span> are fundamental in health-related studies</li>
-<li>A significant feature is its <span style="color:#00BFFF;">temporal</span> dimension, allowing for <span style="color:#00BFFF;">dynamic predictions</span></li>
-<li>These predictions have demonstrated utility in <span style="color:#00BFFF;">precision medicine</span></li>
+<li>A nice cover</li>
 </ul>
 </section>
-<section id="context-and-motivation-1" class="slide level2">
-<h2>Context and motivation</h2>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
 <ul>
-<li><span style="color:#00BFFF;">Joint models (JMs)</span> provide a suitable framework for analyzing time-to-event and longitudinal data together</li>
-<li>JMs allow <span style="color:#00BFFF;">dynamic predictions</span></li>
-<li>Applying JMs to multivariate longitudinal data poses <span style="color:red;">challenges</span> due to the <span style="color:red;">increased number of random effects and parameters</span></li>
+<li>Evaluate dynamic predictions of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)</li>
+<li>Main goal: optimizing antenatal corticosteroid (CCS) administration</li>
+<li>Methods are applied to the OPTICORE cohort study data</li>
 </ul>
 </section>
-<section id="the-pbc-dataset" class="slide level2">
-<h2>The PBC dataset</h2>
+<section id="asymmetric-misclassification" class="slide level2">
+<h2>Asymmetric misclassification</h2>
 <ul>
-<li>The <span style="color:#00BFFF;">PBC dataset</span> is a widely used, <span style="color:#00BFFF;">freely available</span>, dataset that will be used to apply the methods</li>
-<li>By using the PBC dataset, all methods are <span style="color:#00BFFF;">fully reproducible</span></li>
-<li>Primary biliary cirrhosis (PBC) is a rare disease that could eventually lead to liver cirrhosis</li>
+<li><span style="color:#00BFFF;">Some nice outline</span></li>
+</ul>
+</section>
+<section id="challenges-of-the-data" class="slide level2">
+<h2>Challenges of the data</h2>
+<ul>
+<li>In the OPTICORE data we have left truncation and potentially right censoring.</li>
+<li><span style="color:#00BFFF;">A nice outline to explain the left-truncation</span></li>
+</ul>
+</section>
+<section id="notation" class="slide level2">
+<h2>Notation</h2>
+<ul>
+<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{T_1^*,\dots, T_n^*}\)</span> true time until event</li>
+<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{C_1,\dots, C_n}\)</span> censoring times</li>
+<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{T_i=\min(T_i^*, C_i)}\)</span> observed times, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
+<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}\)</span> censoring indicator, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
+<li>Longitudinal data <span class="math inline">\(\require{color}\textcolor{#D2691E}{\{\boldsymbol{y}_{li}; i=1,\dots,n, l=1,\dots,L\}}\)</span>
+<ul>
+<li><span class="math inline">\(\require{color}\textcolor{#D2691E}{y_{li}(t_{ij})}\)</span> value of the longitudinal outcome at <span class="math inline">\(t_{ij}\)</span>, <span class="math inline">\(j=1,\dots,n_{li}\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{w_i}\)</span> vector of baseline covarites</li>
 </ul>
 </section>
 <section id="vector" class="slide level2">

@@ -1,24 +1,38 @@
 [
   {
-    "objectID": "index.html#context-and-motivation",
-    "href": "index.html#context-and-motivation",
+    "objectID": "index.html#cover",
+    "href": "index.html#cover",
     "title": "",
-    "section": "Context and motivation",
-    "text": "Context and motivation\n\nTime-to-event and longitudinal data are fundamental in health-related studies\nA significant feature is its temporal dimension, allowing for dynamic predictions\nThese predictions have demonstrated utility in precision medicine"
+    "section": "Cover",
+    "text": "Cover\n\nA nice cover"
   },
   {
-    "objectID": "index.html#context-and-motivation-1",
-    "href": "index.html#context-and-motivation-1",
+    "objectID": "index.html#motivation",
+    "href": "index.html#motivation",
     "title": "",
-    "section": "Context and motivation",
-    "text": "Context and motivation\n\nJoint models (JMs) provide a suitable framework for analyzing time-to-event and longitudinal data together\nJMs allow dynamic predictions\nApplying JMs to multivariate longitudinal data poses challenges due to the increased number of random effects and parameters"
+    "section": "Motivation",
+    "text": "Motivation\n\nEvaluate dynamic predictions of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)\nMain goal: optimizing antenatal corticosteroid (CCS) administration\nMethods are applied to the OPTICORE cohort study data"
   },
   {
-    "objectID": "index.html#the-pbc-dataset",
-    "href": "index.html#the-pbc-dataset",
+    "objectID": "index.html#asymmetric-misclassification",
+    "href": "index.html#asymmetric-misclassification",
     "title": "",
-    "section": "The PBC dataset",
-    "text": "The PBC dataset\n\nThe PBC dataset is a widely used, freely available, dataset that will be used to apply the methods\nBy using the PBC dataset, all methods are fully reproducible\nPrimary biliary cirrhosis (PBC) is a rare disease that could eventually lead to liver cirrhosis"
+    "section": "Asymmetric misclassification",
+    "text": "Asymmetric misclassification\n\nSome nice outline"
+  },
+  {
+    "objectID": "index.html#challenges-of-the-data",
+    "href": "index.html#challenges-of-the-data",
+    "title": "",
+    "section": "Challenges of the data",
+    "text": "Challenges of the data\n\nIn the OPTICORE data we have left truncation and potentially right censoring.\nA nice outline to explain the left-truncation"
+  },
+  {
+    "objectID": "index.html#notation",
+    "href": "index.html#notation",
+    "title": "",
+    "section": "Notation",
+    "text": "Notation\n\n\\(\\require{color}\\textcolor{#2E8B57}{T_1^*,\\dots, T_n^*}\\) true time until event\n\\(\\require{color}\\textcolor{#2E8B57}{C_1,\\dots, C_n}\\) censoring times\n\\(\\require{color}\\textcolor{#2E8B57}{T_i=\\min(T_i^*, C_i)}\\) observed times, \\(i=1,\\dotsc,n\\)\n\\(\\require{color}\\textcolor{#2E8B57}{\\delta_i=\\mathbf{1}\\{T_i^*\\leq C_i\\}}\\) censoring indicator, \\(i=1,\\dotsc,n\\)\nLongitudinal data \\(\\require{color}\\textcolor{#D2691E}{\\{\\boldsymbol{y}_{li}; i=1,\\dots,n, l=1,\\dots,L\\}}\\)\n\n\\(\\require{color}\\textcolor{#D2691E}{y_{li}(t_{ij})}\\) value of the longitudinal outcome at \\(t_{ij}\\), \\(j=1,\\dots,n_{li}\\)\n\n\\(\\require{color}\\textcolor{#2E8B57}{w_i}\\) vector of baseline covarites"
   },
   {
     "objectID": "index.html#vector",

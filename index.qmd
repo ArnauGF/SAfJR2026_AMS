@@ -9,23 +9,34 @@ format:
     menu: false
 ---
 
-## Context and motivation
+## Cover
 
--   [Time-to-event and longitudinal data]{style="color:#00BFFF;"} are fundamental in health-related studies
--   A significant feature is its [temporal]{style="color:#00BFFF;"} dimension, allowing for [dynamic predictions]{style="color:#00BFFF;"}
--   These predictions have demonstrated utility in [precision medicine]{style="color:#00BFFF;"}
+- A nice cover
 
-## Context and motivation
+## Motivation
 
--   [Joint models (JMs)]{style="color:#00BFFF;"} provide a suitable framework for analyzing time-to-event and longitudinal data together
--   JMs allow [dynamic predictions]{style="color:#00BFFF;"}
--   Applying JMs to multivariate longitudinal data poses [challenges]{style="color:red;"} due to the [increased number of random effects and parameters]{style="color:red;"}
+- Evaluate dynamic predictions of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)
+- Main goal: optimizing antenatal corticosteroid (CCS) administration
+- Methods are applied to the OPTICORE cohort study data
 
-## The PBC dataset
+## Asymmetric misclassification
 
--   The [PBC dataset]{style="color:#00BFFF;"} is a widely used, [freely available]{style="color:#00BFFF;"}, dataset that will be used to apply the methods
--   By using the PBC dataset, all methods are [fully reproducible]{style="color:#00BFFF;"} 
--   Primary biliary cirrhosis (PBC) is a rare disease that could eventually lead to liver cirrhosis
+-   [Some nice outline]{style="color:#00BFFF;"} 
+
+## Challenges of the data
+
+-   In the OPTICORE data we have left truncation and potentially right censoring.
+-   [A nice outline to explain the left-truncation]{style="color:#00BFFF;"} 
+
+## Notation
+
+-   $\require{color}\textcolor{#2E8B57}{T_1^*,\dots, T_n^*}$ true time until event
+-   $\require{color}\textcolor{#2E8B57}{C_1,\dots, C_n}$ censoring times
+-   $\require{color}\textcolor{#2E8B57}{T_i=\min(T_i^*, C_i)}$ observed times, $i=1,\dotsc,n$
+-   $\require{color}\textcolor{#2E8B57}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator, $i=1,\dotsc,n$
+-   Longitudinal data $\require{color}\textcolor{#D2691E}{\{\boldsymbol{y}_{li}; i=1,\dots,n, l=1,\dots,L\}}$
+    -   $\require{color}\textcolor{#D2691E}{y_{li}(t_{ij})}$ value of the longitudinal outcome at $t_{ij}$, $j=1,\dots,n_{li}$
+-   $\require{color}\textcolor{#2E8B57}{w_i}$ vector of baseline covarites
 
 ## Vector
 
