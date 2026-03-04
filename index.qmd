@@ -27,4 +27,10 @@ format:
 -   By using the PBC dataset, all methods are [fully reproducible]{style="color:#00BFFF;"} 
 -   Primary biliary cirrhosis (PBC) is a rare disease that could eventually lead to liver cirrhosis
 
+## Vector
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/vector.svg" style="width:90%; text-align:center;">
+</div>
+
 
