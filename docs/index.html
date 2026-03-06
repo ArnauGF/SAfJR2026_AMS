@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-input2da47ce6040803c6</title>
+  <title>quarto-inputff21098cd418ed73</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -174,21 +174,31 @@
 <p><img src="images/LT2.svg" style="width:90%; text-align:center;"></p>
 </div>
 </section>
-<section id="notation" class="slide level2 background-slide">
-<h2>Notation</h2>
+<section id="definitions-and-notation" class="slide level2 background-slide">
+<h2>Definitions and notation</h2>
+<div class="fragment fade-out" style="position:absolute; top:12%; left:0%;">
 <ul>
-<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{T_1^*,\dots, T_n^*}\)</span> true time until event</li>
-<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{C_1,\dots, C_n}\)</span> right-censoring times</li>
-<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{L_1,\dots, L_n}\)</span> left-truncation times</li>
-<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{T_i=\min(T_i^*, C_i)}\)</span> observed times, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
-<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}\)</span> censoring indicator, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
-<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{\mathcal{H}_i(t)}\)</span> available history at time <span class="math inline">\(t\)</span>, including baseline and time-dependent covarites</li>
+<li><span class="math inline">\(\require{color}\textcolor{#00BFFF}{T_1^*,\dots, T_n^*}\)</span> true time until event</li>
+<li><span class="math inline">\(\require{color}\textcolor{#00BFFF}{C_1,\dots, C_n}\)</span> right-censoring times</li>
+<li><span class="math inline">\(\require{color}\textcolor{#00BFFF}{L_1,\dots, L_n}\)</span> left-truncation times</li>
+<li><span class="math inline">\(\require{color}\textcolor{#00BFFF}{T_i=\min(T_i^*, C_i)}\)</span> observed times, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
+<li><span class="math inline">\(\require{color}\textcolor{#00BFFF}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}\)</span> censoring indicator, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
+<li><span class="math inline">\(\require{color}\textcolor{#00BFFF}{\boldsymbol{\mathcal{H}}_i(t)}\)</span> available history at time <span class="math inline">\(t\)</span>, including baseline and time-dependent covarites</li>
 </ul>
-</section>
-<section id="vector" class="slide level2">
-<h2>Vector</h2>
-<div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
-<p><img src="images/vector.svg" style="width:90%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:12%; left:0%;">
+<ul>
+<li><span style="color:#00BFFF;">Dynamic predictions</span></li>
+</ul>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:22%; left:9%;">
+<p><span class="math display">\[
+  \normalsize\require{color}
+  \pi_{i}(7 \mid t)=\operatorname{Pr}\left(T_{i}^* \leq t+7 \mid T_{i}^*&gt;t, \colorbox{#2E8B57}{$\color{white}\boldsymbol{\mathcal{H}}_i(t)$}\right)
+  \]</span></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:45%; left:12%;">
+<p><img src="images/dynamic_pred.svg" style="width:90%; text-align:center;"></p>
 </div>
 
 

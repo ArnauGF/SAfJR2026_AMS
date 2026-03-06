@@ -21,17 +21,10 @@
     "text": "Challenges of the data\n\nCCS cannot be administered until the fetus reaches \\(500\\) grams and a gestational age of \\(168\\) days (\\(24\\) weeks)"
   },
   {
-    "objectID": "index.html#notation",
-    "href": "index.html#notation",
+    "objectID": "index.html#definitions-and-notation",
+    "href": "index.html#definitions-and-notation",
     "title": "",
-    "section": "Notation",
-    "text": "Notation\n\n\\(\\require{color}\\textcolor{#2E8B57}{T_1^*,\\dots, T_n^*}\\) true time until event\n\\(\\require{color}\\textcolor{#2E8B57}{C_1,\\dots, C_n}\\) right-censoring times\n\\(\\require{color}\\textcolor{#2E8B57}{L_1,\\dots, L_n}\\) left-truncation times\n\\(\\require{color}\\textcolor{#2E8B57}{T_i=\\min(T_i^*, C_i)}\\) observed times, \\(i=1,\\dotsc,n\\)\n\\(\\require{color}\\textcolor{#2E8B57}{\\delta_i=\\mathbf{1}\\{T_i^*\\leq C_i\\}}\\) censoring indicator, \\(i=1,\\dotsc,n\\)\n\\(\\require{color}\\textcolor{#2E8B57}{\\mathcal{H}_i(t)}\\) available history at time \\(t\\), including baseline and time-dependent covarites"
-  },
-  {
-    "objectID": "index.html#vector",
-    "href": "index.html#vector",
-    "title": "",
-    "section": "Vector",
-    "text": "Vector"
+    "section": "Definitions and notation",
+    "text": "Definitions and notation\n\n\n\\(\\require{color}\\textcolor{#00BFFF}{T_1^*,\\dots, T_n^*}\\) true time until event\n\\(\\require{color}\\textcolor{#00BFFF}{C_1,\\dots, C_n}\\) right-censoring times\n\\(\\require{color}\\textcolor{#00BFFF}{L_1,\\dots, L_n}\\) left-truncation times\n\\(\\require{color}\\textcolor{#00BFFF}{T_i=\\min(T_i^*, C_i)}\\) observed times, \\(i=1,\\dotsc,n\\)\n\\(\\require{color}\\textcolor{#00BFFF}{\\delta_i=\\mathbf{1}\\{T_i^*\\leq C_i\\}}\\) censoring indicator, \\(i=1,\\dotsc,n\\)\n\\(\\require{color}\\textcolor{#00BFFF}{\\boldsymbol{\\mathcal{H}}_i(t)}\\) available history at time \\(t\\), including baseline and time-dependent covarites\n\n\n\n\nDynamic predictions\n\n\n\n\\[\n  \\normalsize\\require{color}\n  \\pi_{i}(7 \\mid t)=\\operatorname{Pr}\\left(T_{i}^* \\leq t+7 \\mid T_{i}^*&gt;t, \\colorbox{#2E8B57}{$\\color{white}\\boldsymbol{\\mathcal{H}}_i(t)$}\\right)\n  \\]"
   }
 ]

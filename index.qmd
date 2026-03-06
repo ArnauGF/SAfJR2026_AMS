@@ -59,15 +59,29 @@ format:
 </div>
 
 
+## Definitions and notation {.background-slide}
 
-## Notation {.background-slide}
+<div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
+-   $\require{color}\textcolor{#00BFFF}{T_1^*,\dots, T_n^*}$ true time until event
+-   $\require{color}\textcolor{#00BFFF}{C_1,\dots, C_n}$ right-censoring times
+-   $\require{color}\textcolor{#00BFFF}{L_1,\dots, L_n}$ left-truncation times
+-   $\require{color}\textcolor{#00BFFF}{T_i=\min(T_i^*, C_i)}$ observed times, $i=1,\dotsc,n$
+-   $\require{color}\textcolor{#00BFFF}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator, $i=1,\dotsc,n$
+-   $\require{color}\textcolor{#00BFFF}{\boldsymbol{\mathcal{H}}_i(t)}$ available history at time $t$, including baseline and time-dependent covarites
+</div>
 
--   $\require{color}\textcolor{#2E8B57}{T_1^*,\dots, T_n^*}$ true time until event
--   $\require{color}\textcolor{#2E8B57}{C_1,\dots, C_n}$ right-censoring times
--   $\require{color}\textcolor{#2E8B57}{L_1,\dots, L_n}$ left-truncation times
--   $\require{color}\textcolor{#2E8B57}{T_i=\min(T_i^*, C_i)}$ observed times, $i=1,\dotsc,n$
--   $\require{color}\textcolor{#2E8B57}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator, $i=1,\dotsc,n$
--   $\require{color}\textcolor{#2E8B57}{\mathcal{H}_i(t)}$ available history at time $t$, including baseline and time-dependent covarites
+<div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
+  - [Dynamic predictions]{style="color:#00BFFF;"}
+</div>
 
+<div style="position:absolute; top:22%; left:9%;" class="fragment fade-in">
+  $$
+  \normalsize\require{color}
+  \pi_{i}(7 \mid t)=\operatorname{Pr}\left(T_{i}^* \leq t+7 \mid T_{i}^*>t, \colorbox{#2E8B57}{$\color{white}\boldsymbol{\mathcal{H}}_i(t)$}\right)
+  $$
+</div>
 
+<div style="position:absolute; top:45%; left:12%;" class="fragment fade-in">
+  <img src="images/dynamic_pred.svg" style="width:90%; text-align:center;">
+</div>
 
