@@ -1,38 +1,31 @@
 [
   {
-    "objectID": "index.html#cover",
-    "href": "index.html#cover",
-    "title": "",
-    "section": "Cover",
-    "text": "Cover\n\nA nice cover"
-  },
-  {
     "objectID": "index.html#motivation",
     "href": "index.html#motivation",
     "title": "",
     "section": "Motivation",
-    "text": "Motivation\n\nEvaluate dynamic predictions of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)\nMain goal: optimizing antenatal corticosteroid (CCS) administration\nMethods are applied to the OPTICORE cohort study data"
+    "text": "Motivation\n\n\nEvaluate dynamic predictions of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)\nMain goal: optimizing antenatal corticosteroid (CCS) administration\n\n\n\n\n\n\n\nMethods are applied to data from the OPTICORE multicenter cohort study"
   },
   {
     "objectID": "index.html#asymmetric-misclassification",
     "href": "index.html#asymmetric-misclassification",
     "title": "",
     "section": "Asymmetric misclassification",
-    "text": "Asymmetric misclassification\n\nSome nice outline"
+    "text": "Asymmetric misclassification\n\n\n\n\nTP\n\n\nFP\n\n\nTN\n\n\nFN"
   },
   {
     "objectID": "index.html#challenges-of-the-data",
     "href": "index.html#challenges-of-the-data",
     "title": "",
     "section": "Challenges of the data",
-    "text": "Challenges of the data\n\nIn the OPTICORE data we have left truncation and potentially right censoring.\nA nice outline to explain the left-truncation"
+    "text": "Challenges of the data\n\nCCS cannot be administered until the fetus reaches \\(500\\) grams and a gestational age of \\(168\\) days (\\(24\\) weeks)"
   },
   {
     "objectID": "index.html#notation",
     "href": "index.html#notation",
     "title": "",
     "section": "Notation",
-    "text": "Notation\n\n\\(\\require{color}\\textcolor{#2E8B57}{T_1^*,\\dots, T_n^*}\\) true time until event\n\\(\\require{color}\\textcolor{#2E8B57}{C_1,\\dots, C_n}\\) censoring times\n\\(\\require{color}\\textcolor{#2E8B57}{T_i=\\min(T_i^*, C_i)}\\) observed times, \\(i=1,\\dotsc,n\\)\n\\(\\require{color}\\textcolor{#2E8B57}{\\delta_i=\\mathbf{1}\\{T_i^*\\leq C_i\\}}\\) censoring indicator, \\(i=1,\\dotsc,n\\)\nLongitudinal data \\(\\require{color}\\textcolor{#D2691E}{\\{\\boldsymbol{y}_{li}; i=1,\\dots,n, l=1,\\dots,L\\}}\\)\n\n\\(\\require{color}\\textcolor{#D2691E}{y_{li}(t_{ij})}\\) value of the longitudinal outcome at \\(t_{ij}\\), \\(j=1,\\dots,n_{li}\\)\n\n\\(\\require{color}\\textcolor{#2E8B57}{w_i}\\) vector of baseline covarites"
+    "text": "Notation\n\n\\(\\require{color}\\textcolor{#2E8B57}{T_1^*,\\dots, T_n^*}\\) true time until event\n\\(\\require{color}\\textcolor{#2E8B57}{C_1,\\dots, C_n}\\) right-censoring times\n\\(\\require{color}\\textcolor{#2E8B57}{L_1,\\dots, L_n}\\) left-truncation times\n\\(\\require{color}\\textcolor{#2E8B57}{T_i=\\min(T_i^*, C_i)}\\) observed times, \\(i=1,\\dotsc,n\\)\n\\(\\require{color}\\textcolor{#2E8B57}{\\delta_i=\\mathbf{1}\\{T_i^*\\leq C_i\\}}\\) censoring indicator, \\(i=1,\\dotsc,n\\)\n\\(\\require{color}\\textcolor{#2E8B57}{\\mathcal{H}_i(t)}\\) available history at time \\(t\\), including baseline and time-dependent covarites"
   },
   {
     "objectID": "index.html#vector",

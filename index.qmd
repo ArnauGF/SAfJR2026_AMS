@@ -9,39 +9,65 @@ format:
     menu: false
 ---
 
-## Cover
+## { data-state="cover-slide" data-background-image="images/cover.png" data-background-size="cover" visibility="uncounted"}
 
-- A nice cover
+## Motivation {.background-slide}
 
-## Motivation
+<div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
+  - [Evaluate dynamic predictions]{style="color:#00BFFF;"} of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)
+  - [Main goal]{style="color:#00BFFF;"}: optimizing antenatal corticosteroid (CCS) administration
+</div>
 
-- Evaluate dynamic predictions of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)
-- Main goal: optimizing antenatal corticosteroid (CCS) administration
-- Methods are applied to the OPTICORE cohort study data
+<div style="position:absolute; top:60%; left:12%;">
+  <img src="images/time_line_mujer_feto.svg" style="width:90%; text-align:center;">
+</div>
 
-## Asymmetric misclassification
+<div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
+  - Methods are applied to data from the [OPTICORE]{style="color:#00BFFF;"} multicenter cohort study 
+</div>
 
--   [Some nice outline]{style="color:#00BFFF;"} 
 
-## Challenges of the data
+## Asymmetric misclassification {.background-slide}
 
--   In the OPTICORE data we have left truncation and potentially right censoring.
--   [A nice outline to explain the left-truncation]{style="color:#00BFFF;"} 
+<div style="position:absolute; top:9%; left:18%;">
+  <img src="images/decision_tree.svg" style="width:80%; text-align:center;">
+</div>
 
-## Notation
+<div style="position:absolute; top:20%; left:78%;" class="fragment fade-in">
+  [TP]{style="color:#3ECF72;"}
+</div>
+
+<div style="position:absolute; top:43%; left:78%;" class="fragment fade-in">
+  [FP]{style="color:#FE8330;"}
+</div>
+
+<div style="position:absolute; top:66%; left:78%;" class="fragment fade-in">
+  [TN]{style="color:#3ECF72;"}
+</div>
+
+<div style="position:absolute; top:90%; left:78%;" class="fragment fade-in">
+  [FN]{style="color:#FF4040;"}
+</div>
+
+
+## Challenges of the data {.background-slide}
+
+-   CCS cannot be administered until the fetus reaches [$500$ grams]{style="color:#00BFFF;"} and a gestational age of [$168$ days]{style="color:#00BFFF;"} ($24$ weeks)
+
+<div style="position:absolute; top:37%; left:12%;">
+  <img src="images/LT2.svg" style="width:90%; text-align:center;">
+</div>
+
+
+
+## Notation {.background-slide}
 
 -   $\require{color}\textcolor{#2E8B57}{T_1^*,\dots, T_n^*}$ true time until event
--   $\require{color}\textcolor{#2E8B57}{C_1,\dots, C_n}$ censoring times
+-   $\require{color}\textcolor{#2E8B57}{C_1,\dots, C_n}$ right-censoring times
+-   $\require{color}\textcolor{#2E8B57}{L_1,\dots, L_n}$ left-truncation times
 -   $\require{color}\textcolor{#2E8B57}{T_i=\min(T_i^*, C_i)}$ observed times, $i=1,\dotsc,n$
 -   $\require{color}\textcolor{#2E8B57}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator, $i=1,\dotsc,n$
--   Longitudinal data $\require{color}\textcolor{#D2691E}{\{\boldsymbol{y}_{li}; i=1,\dots,n, l=1,\dots,L\}}$
-    -   $\require{color}\textcolor{#D2691E}{y_{li}(t_{ij})}$ value of the longitudinal outcome at $t_{ij}$, $j=1,\dots,n_{li}$
--   $\require{color}\textcolor{#2E8B57}{w_i}$ vector of baseline covarites
+-   $\require{color}\textcolor{#2E8B57}{\mathcal{H}_i(t)}$ available history at time $t$, including baseline and time-dependent covarites
 
-## Vector
-
-<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
-  <img src="images/vector.svg" style="width:90%; text-align:center;">
-</div>
 
 

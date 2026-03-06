@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-input1a9c983aac748799</title>
+  <title>quarto-input2da47ce6040803c6</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,45 +127,62 @@
     <div class="slides">
 
 
-<section id="cover" class="slide level2">
-<h2>Cover</h2>
-<ul>
-<li>A nice cover</li>
-</ul>
+<section id="section" class="slide level2" data-state="cover-slide" data-background-image="images/cover.png" data-background-size="cover" data-visibility="uncounted">
+<h2></h2>
 </section>
-<section id="motivation" class="slide level2">
+<section id="motivation" class="slide level2 background-slide">
 <h2>Motivation</h2>
+<div class="fragment fade-out" style="position:absolute; top:12%; left:0%;">
 <ul>
-<li>Evaluate dynamic predictions of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)</li>
-<li>Main goal: optimizing antenatal corticosteroid (CCS) administration</li>
-<li>Methods are applied to the OPTICORE cohort study data</li>
+<li><span style="color:#00BFFF;">Evaluate dynamic predictions</span> of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)</li>
+<li><span style="color:#00BFFF;">Main goal</span>: optimizing antenatal corticosteroid (CCS) administration</li>
 </ul>
+</div>
+<div style="position:absolute; top:60%; left:12%;">
+<p><img src="images/time_line_mujer_feto.svg" style="width:90%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:12%; left:0%;">
+<ul>
+<li>Methods are applied to data from the <span style="color:#00BFFF;">OPTICORE</span> multicenter cohort study</li>
+</ul>
+</div>
 </section>
-<section id="asymmetric-misclassification" class="slide level2">
+<section id="asymmetric-misclassification" class="slide level2 background-slide">
 <h2>Asymmetric misclassification</h2>
-<ul>
-<li><span style="color:#00BFFF;">Some nice outline</span></li>
-</ul>
+<div style="position:absolute; top:9%; left:18%;">
+<p><img src="images/decision_tree.svg" style="width:80%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:20%; left:78%;">
+<p><span style="color:#3ECF72;">TP</span></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:43%; left:78%;">
+<p><span style="color:#FE8330;">FP</span></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:66%; left:78%;">
+<p><span style="color:#3ECF72;">TN</span></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:90%; left:78%;">
+<p><span style="color:#FF4040;">FN</span></p>
+</div>
 </section>
-<section id="challenges-of-the-data" class="slide level2">
+<section id="challenges-of-the-data" class="slide level2 background-slide">
 <h2>Challenges of the data</h2>
 <ul>
-<li>In the OPTICORE data we have left truncation and potentially right censoring.</li>
-<li><span style="color:#00BFFF;">A nice outline to explain the left-truncation</span></li>
+<li>CCS cannot be administered until the fetus reaches <span style="color:#00BFFF;"><span class="math inline">\(500\)</span> grams</span> and a gestational age of <span style="color:#00BFFF;"><span class="math inline">\(168\)</span> days</span> (<span class="math inline">\(24\)</span> weeks)</li>
 </ul>
+<div style="position:absolute; top:37%; left:12%;">
+<p><img src="images/LT2.svg" style="width:90%; text-align:center;"></p>
+</div>
 </section>
-<section id="notation" class="slide level2">
+<section id="notation" class="slide level2 background-slide">
 <h2>Notation</h2>
 <ul>
 <li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{T_1^*,\dots, T_n^*}\)</span> true time until event</li>
-<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{C_1,\dots, C_n}\)</span> censoring times</li>
+<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{C_1,\dots, C_n}\)</span> right-censoring times</li>
+<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{L_1,\dots, L_n}\)</span> left-truncation times</li>
 <li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{T_i=\min(T_i^*, C_i)}\)</span> observed times, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
 <li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}\)</span> censoring indicator, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
-<li>Longitudinal data <span class="math inline">\(\require{color}\textcolor{#D2691E}{\{\boldsymbol{y}_{li}; i=1,\dots,n, l=1,\dots,L\}}\)</span>
-<ul>
-<li><span class="math inline">\(\require{color}\textcolor{#D2691E}{y_{li}(t_{ij})}\)</span> value of the longitudinal outcome at <span class="math inline">\(t_{ij}\)</span>, <span class="math inline">\(j=1,\dots,n_{li}\)</span></li>
-</ul></li>
-<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{w_i}\)</span> vector of baseline covarites</li>
+<li><span class="math inline">\(\require{color}\textcolor{#2E8B57}{\mathcal{H}_i(t)}\)</span> available history at time <span class="math inline">\(t\)</span>, including baseline and time-dependent covarites</li>
 </ul>
 </section>
 <section id="vector" class="slide level2">
