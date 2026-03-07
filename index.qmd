@@ -14,8 +14,8 @@ format:
 ## Motivation {.background-slide}
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
-  - [Evaluate dynamic predictions]{style="color:#00BFFF;"} of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)
-  - [Main goal]{style="color:#00BFFF;"}: optimizing antenatal corticosteroid (CCS) administration
+  - [Evaluate dynamic predictions]{style="color:#FF69B4;"} of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)
+  - [Main goal]{style="color:#FF1493;"}: optimizing antenatal corticosteroid (CCS) administration
 </div>
 
 <div style="position:absolute; top:60%; left:12%;">
