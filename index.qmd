@@ -15,7 +15,7 @@ format:
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
   - [Evaluate dynamic predictions]{style="color:#FF69B4;"} of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)
-  - [Main goal]{style="color:#FF1493;"}: optimizing antenatal corticosteroid (CCS) administration
+  - [Main goal]{style="color:#FF69B4;"}: optimizing antenatal corticosteroid (CCS) administration
 </div>
 
 <div style="position:absolute; top:60%; left:12%;">
@@ -23,7 +23,7 @@ format:
 </div>
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
-  - Methods are applied to data from the [OPTICORE]{style="color:#00BFFF;"} multicenter cohort study 
+  - Methods are applied to data from the [OPTICORE]{style="color:#FF69B4;"} multicenter cohort study 
 </div>
 
 
@@ -52,36 +52,165 @@ format:
 
 ## Challenges of the data {.background-slide}
 
--   CCS cannot be administered until the fetus reaches [$500$ grams]{style="color:#00BFFF;"} and a gestational age of [$168$ days]{style="color:#00BFFF;"} ($24$ weeks)
+-   CCS cannot be administered until the fetus reaches [$500$ grams]{style="color:#FF69B4;"} and a gestational age of [$168$ days]{style="color:#FF69B4;"} ($24$ weeks)
 
 <div style="position:absolute; top:37%; left:12%;">
   <img src="images/LT2.svg" style="width:90%; text-align:center;">
 </div>
 
 
+
+
 ## Definitions and notation {.background-slide}
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
--   $\require{color}\textcolor{#00BFFF}{T_1^*,\dots, T_n^*}$ true time until event
--   $\require{color}\textcolor{#00BFFF}{C_1,\dots, C_n}$ right-censoring times
--   $\require{color}\textcolor{#00BFFF}{L_1,\dots, L_n}$ left-truncation times
--   $\require{color}\textcolor{#00BFFF}{T_i=\min(T_i^*, C_i)}$ observed times, $i=1,\dotsc,n$
--   $\require{color}\textcolor{#00BFFF}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator, $i=1,\dotsc,n$
--   $\require{color}\textcolor{#00BFFF}{\boldsymbol{\mathcal{H}}_i(t)}$ available history at time $t$, including baseline and time-dependent covarites
+-   $\require{color}\textcolor{#FF69B4}{T_1^*,\dots, T_n^*}$ true time until event
+-   $\require{color}\textcolor{#FF69B4}{C_1,\dots, C_n}$ right-censoring times
+-   $\require{color}\textcolor{#FF69B4}{L_1,\dots, L_n}$ left-truncation times
+-   $\require{color}\textcolor{#FF69B4}{T_i=\min(T_i^*, C_i)}$ observed times, $i=1,\dotsc,n$
+-   $\require{color}\textcolor{#FF69B4}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator, $i=1,\dotsc,n$
+-   $\require{color}\textcolor{#FF69B4}{\boldsymbol{\mathcal{H}}_i(t)}$ available history at time $t$, including baseline and time-dependent covarites
 </div>
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
-  - [Dynamic predictions]{style="color:#00BFFF;"}
+  - [Dynamic predictions]{style="color:#FF69B4;"}
 </div>
 
 <div style="position:absolute; top:22%; left:9%;" class="fragment fade-in">
   $$
   \normalsize\require{color}
-  \pi_{i}(7 \mid t)=\operatorname{Pr}\left(T_{i}^* \leq t+7 \mid T_{i}^*>t, \colorbox{#2E8B57}{$\color{white}\boldsymbol{\mathcal{H}}_i(t)$}\right)
+  \pi_{i}(s \mid t)=\operatorname{Pr}\left(T_{i}^* \leq t+s \mid T_{i}^*>t, \colorbox{#2E8B57}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_i(t)$}\right)
   $$
 </div>
 
 <div style="position:absolute; top:45%; left:12%;" class="fragment fade-in">
   <img src="images/dynamic_pred.svg" style="width:90%; text-align:center;">
 </div>
+
+
+
+
+## Scoring rules {.background-slide}
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-out">
+  - We evaluate predictions $\pi_i(s \mid t)$ against the binary indicator $D_i(t,s) = \mathbf{1}\{t<T_i^*\leq t+s\}$ via $\require{color}\textcolor{#FF69B4}{\mathcal{S}(\pi_i(s \mid t),D_i(t,s))}$
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - A scoring rule is [proper]{style="color:#FF69B4;"} if 
+  
+  $$ E\left[\mathcal{S}\big(\pi_i^{\text{true}}(s\mid t), D_i(t,s)\big) \right] \leq E\left[\mathcal{S}\big(\widehat{\pi}_i(s\mid t), D_i(t,s)\big) \right] $$
+  
+  - It is [strictly proper]{style="color:#FF69B4;"} if it holds with equality if and only if $\pi_i^{\text{true}}(s\mid t)\equiv \widehat{\pi}_i(s\mid t)$
+  - It is [centered]{style="color:#FF69B4;"} if $\mathcal{S}(1,1)=\mathcal{S}(0,0)=0$
+</div>
+
+<div style="position:absolute; top:13%; left:20%;" class="fragment fade-in-then-out">
+  <img src="images/table1.svg" style="width:75%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
+  - BS, LogS and AUC quantify predictive accuracy, but not the consequences of decisions based on predictions 
+  - BS, LogS and AUC do not account for the asymmetric harms of false-positives and false-negatives decisions
+</div>
+
+
+
+
+## Clinical utility {.background-slide}
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-out">
+  - Focus on the [quality of decisions]{style="color:#FF69B4;"} driven by dynamic predictions
+  - Based on a clinically relevant [decision threshold]{style="color:#FF69B4;"} $c\in(0,1)$
+  - $c$ $\longrightarrow$ cost of false positives;  $1-c$ $\longrightarrow$ cost of false negatives
+</div>
+
+<div style="position:absolute; top:15%; left:3%;" class="fragment fade-in-then-out">
+  <img src="images/decision_rules.svg" style="width:100%; text-align:center;">
+</div>
+
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
+        &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\frac{c}{1-c}
+    \end{split} $$ 
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)}\\
+        &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\frac{c}{1-c}
+    \end{split} $$ 
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
+        &-\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))}\frac{c}{1-c}
+    \end{split} $$ 
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
+        &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\textcolor{#FF69B4}{\frac{c}{1-c}}
+    \end{split} $$ 
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \begin{split}
+        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+        &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
+    \end{split}
+    \end{split} $$ 
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \begin{split}
+        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = \textcolor{#FF69B4}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+        &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
+    \end{split}
+    \end{split} $$ 
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \begin{split}
+        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+        &+(1-c)\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
+    \end{split}
+    \end{split} $$ 
+</div>
+
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \begin{split}
+        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+        &+\textcolor{#FF69B4}{(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
+    \end{split}
+    \end{split} $$ 
+</div>
+
+
+
 
