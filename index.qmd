@@ -171,6 +171,17 @@ $$ \normalsize\require{color}\begin{split}
   
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
+        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+        &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
+    \end{split}
+    \end{split} $$ 
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
+  
+$$ \normalsize\require{color}\begin{split}
+        \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
     \end{split}
@@ -210,6 +221,21 @@ $$ \normalsize\require{color}\begin{split}
     \end{split}
     \end{split} $$ 
 </div>
+
+
+<div style="position:absolute; top:25%; left:20%;" class="fragment fade-in-then-out">
+  <img src="images/table2.svg" style="width:75%; text-align:center;">
+</div>
+
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - NB and EC rely on a single decision threshold $c\in (0,1)$
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - Decision curves (nice graphics for decision curves):
+</div>
+
 
 
 

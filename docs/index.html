@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-inputc1494d854a161f35</title>
+  <title>quarto-input2e42aabd798905f7</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -282,6 +282,17 @@
 </ul>
 <p><span class="math display">\[ \normalsize\require{color}\begin{split}
         \begin{split}
+        \text{EC}_c\big(\pi_i(s\mid t),&amp;D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+        &amp;+(1-c)\mathbf{1}\{\pi_i(s\mid t)&lt; c\}D_i(t,s)
+    \end{split}
+    \end{split} \]</span></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li>A similar metric is the <span style="color:#FF69B4;">expected cost (EC)</span></li>
+</ul>
+<p><span class="math display">\[ \normalsize\require{color}\begin{split}
+        \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&amp;D_i(t,s)\big) = c\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
         &amp;+(1-c)\mathbf{1}\{\pi_i(s\mid t)&lt; c\}D_i(t,s)
     \end{split}
@@ -319,6 +330,19 @@
         &amp;+\textcolor{#FF69B4}{(1-c)\mathbf{1}\{\pi_i(s\mid t)&lt; c\}D_i(t,s)}
     \end{split}
     \end{split} \]</span></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:25%; left:20%;">
+<p><img src="images/table2.svg" style="width:75%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li>NB and EC rely on a single decision threshold <span class="math inline">\(c\in (0,1)\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li>Decision curves (nice graphics for decision curves):</li>
+</ul>
 </div>
 
 
