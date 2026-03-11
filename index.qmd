@@ -232,10 +232,13 @@ $$ \normalsize\require{color}\begin{split}
   - NB and EC rely on a single decision threshold $c\in (0,1)$
 </div>
 
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - Decision curves (nice graphics for decision curves):
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
+  - Decision curves allow multiple $c$'s, but they are not scoring rules
 </div>
 
+<div style="position:absolute; top:30%; left:12%;" class="fragment fade-in">
+  <img src="images/decision_curve_expl.png" style="width:90%; text-align:center;">
+</div>
 
 
 
