@@ -110,8 +110,8 @@ format:
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
-  - BS, LogS and AUC quantify predictive accuracy, but not the consequences of decisions based on predictions 
-  - BS, LogS and AUC do not account for the asymmetric harms of false-positives and false-negatives decisions
+  - The dynamic BS, LogS and AUC quantify predictive accuracy, but not the consequences of decisions based on predictions 
+  - They do not account for the asymmetric harms of false-positives and false-negatives decisions
 </div>
 
 
@@ -132,7 +132,7 @@ format:
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic NB]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
         &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\frac{c}{1-c}
@@ -141,7 +141,7 @@ $$ \normalsize\require{color}\begin{split}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic NB]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)}\\
         &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\frac{c}{1-c}
@@ -150,7 +150,7 @@ $$ \normalsize\require{color}\begin{split}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic NB]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
         &-\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))}\frac{c}{1-c}
@@ -159,7 +159,7 @@ $$ \normalsize\require{color}\begin{split}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic NB]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
         &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\textcolor{#FF69B4}{\frac{c}{1-c}}
@@ -168,7 +168,7 @@ $$ \normalsize\require{color}\begin{split}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic EC]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
@@ -179,7 +179,7 @@ $$ \normalsize\require{color}\begin{split}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic EC]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
@@ -190,7 +190,7 @@ $$ \normalsize\require{color}\begin{split}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic EC]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = \textcolor{#FF69B4}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
@@ -201,36 +201,32 @@ $$ \normalsize\require{color}\begin{split}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic EC]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
-        \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
         &+(1-c)\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
-    \end{split}
     \end{split} $$ 
 </div>
 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  
+  - We define the [dynamic EC]{style="color:#FF69B4;"} 
 $$ \normalsize\require{color}\begin{split}
-        \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
         &+\textcolor{#FF69B4}{(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
-    \end{split}
     \end{split} $$ 
 </div>
 
+::: {.fragment .fade-in-then-out}
 
-<div style="position:absolute; top:25%; left:20%;" class="fragment fade-in-then-out">
-  <img src="images/table2.svg" style="width:75%; text-align:center;">
-</div>
+- NB and EC rely on a single decision threshold $c\in (0,1)$
 
+<center>
+<img src="images/table2.svg" width="75%">
+</center>
 
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - NB and EC rely on a single decision threshold $c\in (0,1)$
-</div>
+:::
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
   - Decision curves allow multiple $c$'s, but they are not scoring rules
@@ -241,5 +237,41 @@ $$ \normalsize\require{color}\begin{split}
 </div>
 
 
+
+## Integrated weighted expected cost {.background-slide}
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#FF69B4;"}
+  
+  $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \int_0^1\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)w(c)dc \end{split} $$
+  
+  - $w(\cdot)$ is a positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#FF69B4;"}
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#FF69B4;"}
+  
+  $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \textcolor{#FF69B4}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#FF69B4}{w(c)dc} \end{split} $$
+  
+  - $w(\cdot)$ is a positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#FF69B4;"}
+</div>
+
+::: {.fragment .fade-in-then-out}
+
+- We rely on a weight function, considering all thresholds $c\in (0,1)$ and its relative clinical importance
+
+<center>
+<img src="images/table_IWEC.svg" width="75%">
+</center>
+
+:::
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
+* A scoring rule is centered strictly proper [$\Longleftrightarrow$]{style="color:#FF69B4;"} it can be represented by $\text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big)$
+  + For [$w(c)=1$]{style="color:#FF69B4;"}, we obtain the dynamic Brier score
+  + For [$w(c)=c^{-1}(1-c)^{-1}$]{style="color:#FF69B4;"}, we obtain the logarithmic score
+</div>
+
+## Estimation under LTRC data {.background-slide}
 
 
