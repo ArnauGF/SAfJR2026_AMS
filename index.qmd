@@ -14,8 +14,8 @@ format:
 ## Motivation {.background-slide}
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
-  - [Evaluate dynamic predictions]{style="color:#FF69B4;"} of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)
-  - [Main goal]{style="color:#FF69B4;"}: optimizing antenatal corticosteroid (CCS) administration
+  - [Evaluate dynamic predictions]{style="color:#EB589A;"} of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)
+  - [Main goal]{style="color:#EB589A;"}: optimizing antenatal corticosteroid (CCS) administration
 </div>
 
 <div style="position:absolute; top:60%; left:12%;">
@@ -23,7 +23,7 @@ format:
 </div>
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
-  - Methods are applied to data from the [OPTICORE]{style="color:#FF69B4;"} multicenter cohort study 
+  - Methods are applied to data from the [OPTICORE]{style="color:#EB589A;"} multicenter cohort study 
 </div>
 
 
@@ -52,7 +52,7 @@ format:
 
 ## Challenges of the data {.background-slide}
 
--   CCS cannot be administered until the fetus reaches [$500$ grams]{style="color:#FF69B4;"} and a gestational age of [$168$ days]{style="color:#FF69B4;"} ($24$ weeks)
+-   CCS cannot be administered until the fetus reaches [$500$ grams]{style="color:#EB589A;"} and a gestational age of [$168$ days]{style="color:#EB589A;"} ($24$ weeks)
 
 <div style="position:absolute; top:37%; left:12%;">
   <img src="images/LT2.svg" style="width:90%; text-align:center;">
@@ -64,22 +64,22 @@ format:
 ## Definitions and notation {.background-slide}
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
--   $\require{color}\textcolor{#FF69B4}{T_1^*,\dots, T_n^*}$ true time until event
--   $\require{color}\textcolor{#FF69B4}{C_1,\dots, C_n}$ right-censoring times
--   $\require{color}\textcolor{#FF69B4}{L_1,\dots, L_n}$ left-truncation times
--   $\require{color}\textcolor{#FF69B4}{T_i=\min(T_i^*, C_i)}$ observed times, $i=1,\dotsc,n$
--   $\require{color}\textcolor{#FF69B4}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator, $i=1,\dotsc,n$
--   $\require{color}\textcolor{#FF69B4}{\boldsymbol{\mathcal{H}}_i(t)}$ available history at time $t$, including baseline and time-dependent covarites
+-   $\require{color}\textcolor{#EB589A}{T_1^*,\dots, T_n^*}$ true time until event
+-   $\require{color}\textcolor{#EB589A}{C_1,\dots, C_n}$ right-censoring times
+-   $\require{color}\textcolor{#EB589A}{L_1,\dots, L_n}$ left-truncation times
+-   $\require{color}\textcolor{#EB589A}{T_i=\min(T_i^*, C_i)}$ observed times, $i=1,\dotsc,n$
+-   $\require{color}\textcolor{#EB589A}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator, $i=1,\dotsc,n$
+-   $\require{color}\textcolor{#EB589A}{\boldsymbol{\mathcal{H}}_i(t)}$ available history at time $t$, including baseline and time-dependent covarites
 </div>
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
-  - [Dynamic predictions]{style="color:#FF69B4;"}
+  - [Dynamic predictions]{style="color:#EB589A;"}
 </div>
 
 <div style="position:absolute; top:22%; left:9%;" class="fragment fade-in">
   $$
   \normalsize\require{color}
-  \pi_{i}(s \mid t)=\operatorname{Pr}\left(T_{i}^* \leq t+s \mid T_{i}^*>t, \colorbox{#2E8B57}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_i(t)$}\right)
+  \pi_{i}(s \mid t)=\operatorname{Pr}\left(T_{i}^* \leq t+s \mid T_{i}^*>t, \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_i(t)$}\right)
   $$
 </div>
 
@@ -93,16 +93,16 @@ format:
 ## Scoring rules {.background-slide}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-out">
-  - We evaluate predictions $\pi_i(s \mid t)$ against the binary indicator $D_i(t,s) = \mathbf{1}\{t<T_i^*\leq t+s\}$ via $\require{color}\textcolor{#FF69B4}{\mathcal{S}(\pi_i(s \mid t),D_i(t,s))}$
+  - We evaluate predictions $\pi_i(s \mid t)$ against the binary indicator $D_i(t,s) = \mathbf{1}\{t<T_i^*\leq t+s\}$ via $\require{color}\textcolor{#EB589A}{\mathcal{S}(\pi_i(s \mid t),D_i(t,s))}$
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A scoring rule is [proper]{style="color:#FF69B4;"} if 
+  - A scoring rule is [proper]{style="color:#EB589A;"} if 
   
   $$ E\left[\mathcal{S}\big(\pi_i^{\text{true}}(s\mid t), D_i(t,s)\big) \right] \leq E\left[\mathcal{S}\big(\widehat{\pi}_i(s\mid t), D_i(t,s)\big) \right] $$
   
-  - It is [strictly proper]{style="color:#FF69B4;"} if it holds with equality if and only if $\pi_i^{\text{true}}(s\mid t)\equiv \widehat{\pi}_i(s\mid t)$
-  - It is [centered]{style="color:#FF69B4;"} if $\mathcal{S}(1,1)=\mathcal{S}(0,0)=0$
+  - It is [strictly proper]{style="color:#EB589A;"} if it holds with equality if and only if $\pi_i^{\text{true}}(s\mid t)\equiv \widehat{\pi}_i(s\mid t)$
+  - It is [centered]{style="color:#EB589A;"} if $\mathcal{S}(1,1)=\mathcal{S}(0,0)=0$
 </div>
 
 <div style="position:absolute; top:13%; left:20%;" class="fragment fade-in-then-out">
@@ -120,8 +120,8 @@ format:
 ## Clinical utility {.background-slide}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-out">
-  - Focus on the [quality of decisions]{style="color:#FF69B4;"} driven by dynamic predictions
-  - Based on a clinically relevant [decision threshold]{style="color:#FF69B4;"} $c\in(0,1)$
+  - Focus on the [quality of decisions]{style="color:#EB589A;"} driven by dynamic predictions
+  - Based on a clinically relevant [decision threshold]{style="color:#EB589A;"} $c\in(0,1)$
   - $c$ $\longrightarrow$ cost of false positives;  $1-c$ $\longrightarrow$ cost of false negatives
 </div>
 
@@ -131,8 +131,8 @@ format:
 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
-  - We define the [dynamic NB]{style="color:#FF69B4;"} 
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
+  - We define the [dynamic NB]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
         &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\frac{c}{1-c}
@@ -140,35 +140,35 @@ $$ \normalsize\require{color}\begin{split}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
-  - We define the [dynamic NB]{style="color:#FF69B4;"} 
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
+  - We define the [dynamic NB]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
-        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)}\\
+        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)}\\
         &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\frac{c}{1-c}
     \end{split} $$ 
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
-  - We define the [dynamic NB]{style="color:#FF69B4;"} 
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
+  - We define the [dynamic NB]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
-        &-\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))}\frac{c}{1-c}
+        &-\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))}\frac{c}{1-c}
     \end{split} $$ 
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#FF69B4;"} 
-  - We define the [dynamic NB]{style="color:#FF69B4;"} 
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
+  - We define the [dynamic NB]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
-        &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\textcolor{#FF69B4}{\frac{c}{1-c}}
+        &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\textcolor{#EB589A}{\frac{c}{1-c}}
     \end{split} $$ 
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  - We define the [dynamic EC]{style="color:#FF69B4;"} 
+  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
+  - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
@@ -178,43 +178,43 @@ $$ \normalsize\require{color}\begin{split}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  - We define the [dynamic EC]{style="color:#FF69B4;"} 
+  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
+  - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
     \end{split}
     \end{split} $$ 
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  - We define the [dynamic EC]{style="color:#FF69B4;"} 
+  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
+  - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = \textcolor{#FF69B4}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+        \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = \textcolor{#EB589A}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
     \end{split}
     \end{split} $$ 
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  - We define the [dynamic EC]{style="color:#FF69B4;"} 
+  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
+  - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
-        &+(1-c)\textcolor{#FF69B4}{\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
+        &+(1-c)\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
     \end{split} $$ 
 </div>
 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A similar metric is the [expected cost (EC)]{style="color:#FF69B4;"} 
-  - We define the [dynamic EC]{style="color:#FF69B4;"} 
+  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
+  - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),&D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
-        &+\textcolor{#FF69B4}{(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
+        &+\textcolor{#EB589A}{(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
     \end{split} $$ 
 </div>
 
@@ -233,7 +233,7 @@ $$ \normalsize\require{color}\begin{split}
 </div>
 
 <div style="position:absolute; top:30%; left:12%;" class="fragment fade-in">
-  <img src="images/decision_curve_expl.png" style="width:90%; text-align:center;">
+  <img src="images/dc_expl_CV_transp.svg" style="width:85%; text-align:center;">
 </div>
 
 
@@ -241,24 +241,24 @@ $$ \normalsize\require{color}\begin{split}
 ## Integrated weighted expected cost {.background-slide}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#FF69B4;"}
+  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#EB589A;"}
   
   $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \int_0^1\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)w(c)dc \end{split} $$
   
-  - $w(\cdot)$ is a positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#FF69B4;"}
+  - $w(\cdot)$ is a positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#EB589A;"}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#FF69B4;"}
+  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#EB589A;"}
   
-  $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \textcolor{#FF69B4}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#FF69B4}{w(c)dc} \end{split} $$
+  $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \textcolor{#EB589A}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#EB589A}{w(c)dc} \end{split} $$
   
-  - $w(\cdot)$ is a positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#FF69B4;"}
+  - $w(\cdot)$ is a positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#EB589A;"}
 </div>
 
 ::: {.fragment .fade-in-then-out}
 
-- We rely on a weight function, considering all thresholds $c\in (0,1)$ and its relative clinical importance
+- We rely on a weight function, [considering all thresholds]{style="color:#EB589A;"} $c\in (0,1)$ and its [relative clinical importance]{style="color:#EB589A;"}
 
 <center>
 <img src="images/table_IWEC.svg" width="75%">
@@ -267,11 +267,108 @@ $$ \normalsize\require{color}\begin{split}
 :::
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
-* A scoring rule is centered strictly proper [$\Longleftrightarrow$]{style="color:#FF69B4;"} it can be represented by $\text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big)$
-  + For [$w(c)=1$]{style="color:#FF69B4;"}, we obtain the dynamic Brier score
-  + For [$w(c)=c^{-1}(1-c)^{-1}$]{style="color:#FF69B4;"}, we obtain the logarithmic score
+* A scoring rule is centered strictly proper [$\Longleftrightarrow$]{style="color:#EB589A;"} it can be represented by $\text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big)$
+  + For [$w(c)=1$]{style="color:#EB589A;"}, we obtain the dynamic Brier score
+  + For [$w(c)=c^{-1}(1-c)^{-1}$]{style="color:#EB589A;"}, we obtain the dynamic logarithmic score
 </div>
 
 ## Estimation under LTRC data {.background-slide}
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+- We are interested in [estimating]{style="color:#EB589A;"}, the population level target:
+
+$$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>t\big]$$
+
+- We must account for the challenges posed by the data
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+- Under LTRC data $D_i(t,s)=\mathbf{1}\{t<T_i^*\leq t+s\}$ is unobserved for $i$ censored within $(t, t+s]$ or $L_i>t$
+
+<img src="images/ltrc1.svg" style="width:63%; display:block; margin:auto;">
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+- Under LTRC data $D_i(t,s)=\mathbf{1}\{t<T_i^*\leq t+s\}$ is unobserved for $i$ censored within $(t, t+s]$ or $L_i>t$
+
+<img src="images/ltrc2.png" style="width:63%; display:block; margin:auto;">
+
+</div>
+
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* We address this problem defining the [IPW estimator]{style="color:#EB589A;"}
+
+$$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)$$
+
+
+  + $n_t$ number of individuals at risk at $t$
+  + $\tilde{D}_i(t,s)=\mathbf{1}\{L_i<t<T_i\leq t+s,\delta_i=1\}$ the observed binary indicator
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* We address this problem defining the [IPW estimator]{style="color:#EB589A;"}
+
+$$ \require{color}\widehat{\text{eIWEC}_w}(t,s)=\frac{1}{\textcolor{#EB589A}{n_t}} \sum_{i=1}^n \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)$$
+
+
+  + $\textcolor{#EB589A}{n_t}$ number of individuals at risk at $t$
+  + $\tilde{D}_i(t,s)=\mathbf{1}\{L_i<t<T_i\leq t+s,\delta_i=1\}$ the observed binary indicator
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* We address this problem defining the [IPW estimator]{style="color:#EB589A;"}
+
+$$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\textcolor{#EB589A}{\tilde{D}_i(t,s)}\big)$$
+
+
+  + $n_t$ number of individuals at risk at $t$
+  + $\textcolor{#EB589A}{\tilde{D}_i(t,s)=\mathbf{1}\{L_i<t<T_i\leq t+s,\delta_i=1\}}$ the observed binary indicator
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* The [weights]{style="color:#EB589A;"} are defined as 
+
+$$\small\require{color} \widehat{W}_i(t,s)=\frac{\mathbf{1}\{T_i>t+s\}\mathbf{1}\{L_i<t\}}{\widehat{G}(t+s\mid t)} + \frac{\mathbf{1}\{L_i<t<T_i\leq t+s\} \delta_i}{\widehat{G}(T_i\mid t)}$$
+
+
+  + $\widehat{G}(\cdot)$ is the Kaplan-Meier estimator for the survival function of the censoring time, adjusting the risk sets for left-truncation
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* The [weights]{style="color:#EB589A;"} are defined as 
+
+$$\small\require{color} \widehat{W}_i(t,s)=\frac{\mathbf{1}\{T_i>t+s\}\mathbf{1}\{L_i<t\}}{\textcolor{#EB589A}{\widehat{G}(}t+s\mid t\textcolor{#EB589A}{)}} + \frac{\mathbf{1}\{L_i<t<T_i\leq t+s\} \delta_i}{\textcolor{#EB589A}{\widehat{G}(}T_i\mid t\textcolor{#EB589A}{)}}$$
+
+
+  + $\textcolor{#EB589A}{\widehat{G}(\cdot)}$ is the Kaplan-Meier estimator for the survival function of the censoring time, adjusting the risk sets for left-truncation
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
+* We demostrated that
+  + $\widehat{\text{eIWEC}_w}(t,s)$ is a [consistent]{style="color:#EB589A;"} estimator of $\text{eIWEC}_w(t,s)$
+  + $\sqrt{n}\big(\widehat{\text{eIWEC}_w}(t,s)-\text{eIWEC}_w(t,s)\big) \textcolor{#EB589A}{\xrightarrow{d}} N(0, \sigma^2(t,s))$ 
+</div>
+
+<div style="position:absolute; top:53%; left:0%;" class="fragment fade-in">
+* This result applies to [all centered strictly proper metrics]{style="color:#EB589A;"}, including the dynamic Brier score and logarithmic score
+</div>
+
+
+
+
+## Application: OPTICORE {.background-slide}
+
 
 
