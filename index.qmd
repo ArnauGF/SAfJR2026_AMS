@@ -370,5 +370,40 @@ $$\small\require{color} \widehat{W}_i(t,s)=\frac{\mathbf{1}\{T_i>t+s\}\mathbf{1}
 
 ## Application: OPTICORE {.background-slide}
 
+<div style="position:absolute; top:13%; left:0%; font-size:0.85em;" class="fragment fade-in-then-out">
+* [Baseline covariates]{style="color:#EB589A;"}: age, previous pregnancy outcomes, smoking status, pre-existent use of antihypertensive agents, diabetes mellitus, etc.
+* We consider [fetal longitudinal biomarkers]{style="color:#EB589A;"}:
+  + Pulsatility index of the umbilical artery [($\texttt{PI_UA}$)]{style="color:#EB589A;"}
+  + Pulsatility index of the middle cerebral artery [($\texttt{PI_MCA}$)]{style="color:#EB589A;"}
+  + Estimated fetal weight [($\texttt{EFW}$)]{style="color:#EB589A;"}
+  + Short-term variation in fetal heart rate [($\texttt{STV}$)]{style="color:#EB589A;"}
+* And [maternal longitudinal biomarkers]{style="color:#EB589A;"}:
+  + Systolic blood pressure [($\texttt{sBP}$)]{style="color:#EB589A;"}
+</div>
 
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+$$ \require{color}\scriptsize\begin{cases}
+         \texttt{PI_UA}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{1i}(t)$} + \varepsilon_{1i}(t) \\
+        &=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2(t,\lambda)  + \varepsilon_{1i}(t),\\
+         \texttt{PI_MCA}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{2i}(t)$} + \varepsilon_{2i}(t) \\
+         & = (\beta_0^2 + b_{0i}^2) + (\beta_{1}^2 + b_{1i}^2)B_1(t,\lambda) +  (\beta_{2}^2 + b_{2i}^2)B_2(t,\lambda)  + \varepsilon_{2i}(t),\\
+          \texttt{EFW}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{3i}(t)$} + \varepsilon_{3i}(t) \\
+        & =(\beta_0^3 + b_{0i}^3) + \sum_{j=1}^3(\beta_{j}^3 + b_{ji}^3)B_j(t,\lambda)  + \varepsilon_{3i}(t),\\
+        \log(\texttt{STV}_i(t)) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{4i}(t)$} + \varepsilon_{4i}(t)\\
+        & = (\beta_0^4 + b_{0i}^4) + (\beta_{1}^4 + b_{1i}^4)B_1(t,\lambda) +  (\beta_{2}^4 + b_{2i}^4)B_2(t,\lambda)  + \varepsilon_{4i}(t),\\
+        \texttt{sBP}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{5i}(t)$} + \varepsilon_{5i}(t)\\
+        & = (\beta_0^5 + b_{0i}^5) + \sum_{j=1}^3(\beta_{j}^5 + b_{ji}^5)B_j(t,\lambda)   + \varepsilon_{5i}(t),
+    \end{cases}$$
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+- We fit five [joint models]{style="color:#EB589A;"} using the baseline data and the longitudinal submodels:
+
+$$\scriptsize\begin{cases} 
+M1: & h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_1\colorbox{#D2691E}{$\color{white}m_{1i}(t_{ij})$} \big) \\
+M2: & h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_2\colorbox{#D2691E}{$\color{white}m_{2i}(t_{ij})$} \big) \\
+M3: & h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_3\colorbox{#D2691E}{$\color{white}m_{3i}(t_{ij})$} \big) \\
+M4: & h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_4\colorbox{#D2691E}{$\color{white}m_{4i}(t_{ij})$} \big) 
+\end{cases}$$
+</div>
 

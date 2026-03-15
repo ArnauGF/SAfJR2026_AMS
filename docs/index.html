@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-inputeb02063786ecae98</title>
+  <title>quarto-input8aa61a433e687e4</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -470,6 +470,47 @@
 </section>
 <section id="application-opticore" class="slide level2 background-slide">
 <h2>Application: OPTICORE</h2>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%; font-size:0.85em;">
+<ul>
+<li><span style="color:#EB589A;">Baseline covariates</span>: age, previous pregnancy outcomes, smoking status, pre-existent use of antihypertensive agents, diabetes mellitus, etc.</li>
+<li>We consider <span style="color:#EB589A;">fetal longitudinal biomarkers</span>:
+<ul>
+<li>Pulsatility index of the umbilical artery <span style="color:#EB589A;">(<span class="math inline">\(\texttt{PI_UA}\)</span>)</span></li>
+<li>Pulsatility index of the middle cerebral artery <span style="color:#EB589A;">(<span class="math inline">\(\texttt{PI_MCA}\)</span>)</span></li>
+<li>Estimated fetal weight <span style="color:#EB589A;">(<span class="math inline">\(\texttt{EFW}\)</span>)</span></li>
+<li>Short-term variation in fetal heart rate <span style="color:#EB589A;">(<span class="math inline">\(\texttt{STV}\)</span>)</span></li>
+</ul></li>
+<li>And maternal <span style="color:#EB589A;">longitudinal biomarkers</span>:
+<ul>
+<li>Systolic blood pressure <span style="color:#EB589A;">(<span class="math inline">\(\texttt{sBP}\)</span>)</span></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<p><span class="math display">\[ \require{color}\scriptsize\begin{cases}
+         \texttt{PI_UA}_i(t) &amp; = \colorbox{#EB589A}{$\color{#FBE1EE}m_{1i}(t)$} + \varepsilon_{1i}(t) \\
+        &amp;=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2(t,\lambda)  + \varepsilon_{1i}(t),\\
+         \texttt{PI_MCA}_i(t) &amp; = \colorbox{#EB589A}{$\color{#FBE1EE}m_{2i}(t)$} + \varepsilon_{2i}(t) \\
+         &amp; = (\beta_0^2 + b_{0i}^2) + (\beta_{1}^2 + b_{1i}^2)B_1(t,\lambda) +  (\beta_{2}^2 + b_{2i}^2)B_2(t,\lambda)  + \varepsilon_{2i}(t),\\
+          \texttt{EFW}_i(t) &amp; = \colorbox{#EB589A}{$\color{#FBE1EE}m_{3i}(t)$} + \varepsilon_{3i}(t) \\
+        &amp; =(\beta_0^3 + b_{0i}^3) + \sum_{j=1}^3(\beta_{j}^3 + b_{ji}^3)B_j(t,\lambda)  + \varepsilon_{3i}(t),\\
+        \log(\texttt{STV}_i(t)) &amp; = \colorbox{#EB589A}{$\color{#FBE1EE}m_{4i}(t)$} + \varepsilon_{4i}(t)\\
+        &amp; = (\beta_0^4 + b_{0i}^4) + (\beta_{1}^4 + b_{1i}^4)B_1(t,\lambda) +  (\beta_{2}^4 + b_{2i}^4)B_2(t,\lambda)  + \varepsilon_{4i}(t),\\
+        \texttt{sBP}_i(t) &amp; = \colorbox{#EB589A}{$\color{#FBE1EE}m_{5i}(t)$} + \varepsilon_{5i}(t)\\
+        &amp; = (\beta_0^5 + b_{0i}^5) + \sum_{j=1}^3(\beta_{j}^5 + b_{ji}^5)B_j(t,\lambda)   + \varepsilon_{5i}(t),
+    \end{cases}\]</span></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li>We fit five <span style="color:#00BFFF;">joint models</span> using the baseline data and the longitudinal submodels:</li>
+</ul>
+<p><span class="math display">\[\scriptsize\begin{cases}
+M1: &amp; h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_1\colorbox{#D2691E}{$\color{white}m_{1i}(t_{ij})$} \big) \\
+M2: &amp; h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_2\colorbox{#D2691E}{$\color{white}m_{2i}(t_{ij})$} \big) \\
+M3: &amp; h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_3\colorbox{#D2691E}{$\color{white}m_{3i}(t_{ij})$} \big) \\
+M4: &amp; h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_4\colorbox{#D2691E}{$\color{white}m_{4i}(t_{ij})$} \big)
+\end{cases}\]</span></p>
+</div>
 
 
 </section>
