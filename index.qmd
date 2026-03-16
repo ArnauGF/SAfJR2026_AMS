@@ -384,15 +384,15 @@ $$\small\require{color} \widehat{W}_i(t,s)=\frac{\mathbf{1}\{T_i>t+s\}\mathbf{1}
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 $$ \require{color}\scriptsize\begin{cases}
          \texttt{PI_UA}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{1i}(t)$} + \varepsilon_{1i}(t) \\
-        &=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2(t,\lambda)  + \varepsilon_{1i}(t),\\
+        &=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1^1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2^1(t,\lambda)  + \varepsilon_{1i}(t),\\
          \texttt{PI_MCA}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{2i}(t)$} + \varepsilon_{2i}(t) \\
-         & = (\beta_0^2 + b_{0i}^2) + (\beta_{1}^2 + b_{1i}^2)B_1(t,\lambda) +  (\beta_{2}^2 + b_{2i}^2)B_2(t,\lambda)  + \varepsilon_{2i}(t),\\
+         & = (\beta_0^2 + b_{0i}^2) + (\beta_{1}^2 + b_{1i}^2)B_1^2(t,\lambda) +  (\beta_{2}^2 + b_{2i}^2)B_2^2(t,\lambda)  + \varepsilon_{2i}(t),\\
           \texttt{EFW}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{3i}(t)$} + \varepsilon_{3i}(t) \\
-        & =(\beta_0^3 + b_{0i}^3) + \sum_{j=1}^3(\beta_{j}^3 + b_{ji}^3)B_j(t,\lambda)  + \varepsilon_{3i}(t),\\
+        & =(\beta_0^3 + b_{0i}^3) + \sum_{j=1}^3(\beta_{j}^3 + b_{ji}^3)B_j^3(t,\lambda)  + \varepsilon_{3i}(t),\\
         \log(\texttt{STV}_i(t)) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{4i}(t)$} + \varepsilon_{4i}(t)\\
-        & = (\beta_0^4 + b_{0i}^4) + (\beta_{1}^4 + b_{1i}^4)B_1(t,\lambda) +  (\beta_{2}^4 + b_{2i}^4)B_2(t,\lambda)  + \varepsilon_{4i}(t),\\
+        & = (\beta_0^4 + b_{0i}^4) + (\beta_{1}^4 + b_{1i}^4)B_1^4(t,\lambda) +  (\beta_{2}^4 + b_{2i}^4)B_2^4(t,\lambda)  + \varepsilon_{4i}(t),\\
         \texttt{sBP}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{5i}(t)$} + \varepsilon_{5i}(t)\\
-        & = (\beta_0^5 + b_{0i}^5) + \sum_{j=1}^3(\beta_{j}^5 + b_{ji}^5)B_j(t,\lambda)   + \varepsilon_{5i}(t),
+        & = (\beta_0^5 + b_{0i}^5) + \sum_{j=1}^3(\beta_{j}^5 + b_{ji}^5)B_j^5(t,\lambda)   + \varepsilon_{5i}(t),
     \end{cases}$$
 </div>
 
