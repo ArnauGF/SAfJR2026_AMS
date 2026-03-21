@@ -408,12 +408,12 @@ $$\scriptsize\begin{cases}
 \textcolor{#EB589A}{\text{JM}_{\text{STV}}}: & h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_2\colorbox{#EB589A}{$\color{#FBE1EE}\int_{t-7}^tm_{2i}(s)ds$} \big) 
 \end{cases}$$
 
-- We evaluate [dynamic predictions]{style="color:#EB589A;"} within $(200, 207]$ days of gestation. We still consider [$c\in(0.1,0.3)$]{style="color:#EB589A;"}, we use [$w(c;5.16, 17.62)$]{style="color:#EB589A;"}.
+- We evaluate [dynamic predictions]{style="color:#EB589A;"} within $(200, 207]$ days of gestation. We still consider [$c\in(0.1,0.3)$]{style="color:#EB589A;"}, we use [$w(c;5.16, 17.62)$]{style="color:#EB589A;"}
 </div>
 
 ::: {.fragment .fade-in-then-out}
 
-- We extend the classical decision curve analysis defining [weighted decision curves]{style="color:#EB589A;"}.
+- We extend the classical decision curve analysis by defining [weighted decision curves]{style="color:#EB589A;"}
 
 <center>
 <img src="images/dcs1.png" width="75%">
