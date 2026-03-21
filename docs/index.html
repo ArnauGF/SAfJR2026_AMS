@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-input33de8802c868e57e</title>
+  <title>quarto-input412b590de94cad07</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -455,16 +455,16 @@
 </ul>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
-<p><img src="images/w1.png" style="width:85%; text-align:center;"></p>
+<p><img src="images/w1_l.png" style="width:85%; text-align:center;"></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
-<p><img src="images/w2.png" style="width:85%; text-align:center;"></p>
+<p><img src="images/w2_l.png" style="width:85%; text-align:center;"></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
-<p><img src="images/w3.png" style="width:85%; text-align:center;"></p>
+<p><img src="images/w3_l.png" style="width:85%; text-align:center;"></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
-<p><img src="images/ws.png" style="width:85%; text-align:center;"></p>
+<p><img src="images/ws_l.png" style="width:85%; text-align:center;"></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
 <p><img src="images/barplots.png" style="width:100%; text-align:center;"></p>
@@ -501,15 +501,26 @@
 \textcolor{#EB589A}{\text{JM}_{\text{PI_UA}}}: &amp; h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_1\colorbox{#EB589A}{$\color{#FBE1EE}\frac{m_{1i}(t) - m_{1i}(t-7)}{7}$} \big) \\
 \textcolor{#EB589A}{\text{JM}_{\text{STV}}}: &amp; h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_2\colorbox{#EB589A}{$\color{#FBE1EE}\int_{t-7}^tm_{2i}(s)ds$} \big)
 \end{cases}\]</span></p>
+<ul>
+<li>We evaluate <span style="color:#EB589A;">dynamic predictions</span> within <span class="math inline">\((200, 207]\)</span> days of gestation. We still consider <span style="color:#EB589A;"><span class="math inline">\(c\in(0.1,0.3)\)</span></span>, we use <span style="color:#EB589A;"><span class="math inline">\(w(c;5.16, 17.62)\)</span></span>.</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out">
+<ul>
+<li>We extend the classical decision curve analysis defining <span style="color:#EB589A;">weighted decision curves</span>.</li>
+</ul>
+<center>
+<img src="images/dcs1.png" width="75%">
+</center>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
 <p><img src="images/wdcs1.png" style="width:100%; text-align:center;"></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
-<p><img src="images/wdcs3.png" style="width:100%; text-align:center;"></p>
+<p><img src="images/wdcs4.png" style="width:100%; text-align:center;"></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
-<p><img src="images/wdcs4.png" style="width:100%; text-align:center;"></p>
+<p><img src="images/wdcs3.png" style="width:100%; text-align:center;"></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
 <p><img src="images/wdcs5.png" style="width:100%; text-align:center;"></p>
@@ -517,6 +528,35 @@
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
 <p><img src="images/wdcs2.png" style="width:100%; text-align:center;"></p>
 </div>
+<div class="fragment fade-in" style="position:absolute; top:12%; left:8%;">
+<p><img src="images/wdcs6.png" style="width:100%; text-align:center;"></p>
+</div>
+</section>
+<section id="contribution-of-the-work" class="slide level2 background-slide">
+<h2>Contribution of the work</h2>
+<div class="fragment fade-in-then-out">
+<ul>
+<li><span style="color:#EB589A;">Extension of clinical utility measures</span> (NB and EC) to dynamic prediction</li>
+<li><span style="color:#EB589A;">Dynamic IWEC</span> definition and <span style="color:#EB589A;">weighted decision curves</span></li>
+<li><span style="color:#EB589A;">IPW estimator</span> tailored to <span style="color:#EB589A;">LRTC data</span></li>
+<li>All methods will be available in the <span style="color:#EB589A;">JMbayes2 R package</span></li>
+</ul>
+<center>
+<img src="images/JMBayes2-logo-no-background.gif" width="23%">
+</center>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li><span style="color:#EB589A;">Limitations</span> of the work:
+<ul>
+<li>Assumption of <span style="color:#EB589A;">covariate independence</span> from truncation and censoring</li>
+<li>Reducing the time-to-event outcome to a <span style="color:#EB589A;">binary outcome</span> discards relevant information</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-state="cover-slide" data-background-image="images/contra.png" data-background-size="cover" data-visibility="uncounted">
+<h2></h2>
 
 
 </section>

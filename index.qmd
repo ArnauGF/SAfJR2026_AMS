@@ -366,19 +366,19 @@ $$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \text
 
 
 <div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
-  <img src="images/w1.png" style="width:85%; text-align:center;">
+  <img src="images/w1_l.png" style="width:85%; text-align:center;">
 </div>
 
 <div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
-  <img src="images/w2.png" style="width:85%; text-align:center;">
+  <img src="images/w2_l.png" style="width:85%; text-align:center;">
 </div>
 
 <div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
-  <img src="images/w3.png" style="width:85%; text-align:center;">
+  <img src="images/w3_l.png" style="width:85%; text-align:center;">
 </div>
 
 <div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
-  <img src="images/ws.png" style="width:85%; text-align:center;">
+  <img src="images/ws_l.png" style="width:85%; text-align:center;">
 </div>
 
 <div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
@@ -413,18 +413,30 @@ $$\scriptsize\begin{cases}
 \textcolor{#EB589A}{\text{JM}_{\text{PI_UA}}}: & h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_1\colorbox{#EB589A}{$\color{#FBE1EE}\frac{m_{1i}(t) - m_{1i}(t-7)}{7}$} \big) \\
 \textcolor{#EB589A}{\text{JM}_{\text{STV}}}: & h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_2\colorbox{#EB589A}{$\color{#FBE1EE}\int_{t-7}^tm_{2i}(s)ds$} \big) 
 \end{cases}$$
+
+- We evaluate [dynamic predictions]{style="color:#EB589A;"} within $(200, 207]$ days of gestation. We still consider [$c\in(0.1,0.3)$]{style="color:#EB589A;"}, we use [$w(c;5.16, 17.62)$]{style="color:#EB589A;"}.
 </div>
+
+::: {.fragment .fade-in-then-out}
+
+- We extend the classical decision curve analysis defining [weighted decision curves]{style="color:#EB589A;"}.
+
+<center>
+<img src="images/dcs1.png" width="75%">
+</center>
+
+:::
 
 <div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
   <img src="images/wdcs1.png" style="width:100%; text-align:center;">
 </div>
 
 <div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
-  <img src="images/wdcs3.png" style="width:100%; text-align:center;">
+  <img src="images/wdcs4.png" style="width:100%; text-align:center;">
 </div>
 
 <div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
-  <img src="images/wdcs4.png" style="width:100%; text-align:center;">
+  <img src="images/wdcs3.png" style="width:100%; text-align:center;">
 </div>
 
 <div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
@@ -435,3 +447,32 @@ $$\scriptsize\begin{cases}
   <img src="images/wdcs2.png" style="width:100%; text-align:center;">
 </div>
 
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in">
+  <img src="images/wdcs6.png" style="width:100%; text-align:center;">
+</div>
+
+
+
+## Contribution of the work {.background-slide}
+
+::: {.fragment .fade-in-then-out}
+
+- [Extension of clinical utility measures]{style="color:#EB589A;"} (NB and EC) to dynamic prediction
+- [Dynamic IWEC]{style="color:#EB589A;"} definition and [weighted decision curves]{style="color:#EB589A;"}
+- [IPW estimator]{style="color:#EB589A;"} tailored to [LRTC data]{style="color:#EB589A;"} 
+- All methods will be available in the [JMbayes2 R package]{style="color:#EB589A;"}
+
+<center>
+<img src="images/JMBayes2-logo-no-background.gif" width="23%">
+</center>
+
+:::
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
+- [Limitations]{style="color:#EB589A;"} of the work:
+  + Assumption of [covariate independence]{style="color:#EB589A;"} from truncation and censoring
+  + Reducing the time-to-event outcome to a [binary outcome]{style="color:#EB589A;"} discards relevant information 
+</div>
+
+
+## { data-state="cover-slide" data-background-image="images/contra.png" data-background-size="cover" visibility="uncounted"}
