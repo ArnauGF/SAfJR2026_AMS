@@ -34,7 +34,7 @@ format:
 </div>
 
 <div style="position:absolute; top:20%; left:78%;" class="fragment fade-in">
-  [TP]{style="color:#3ECF72;"}
+  [TP]{style="color:#228B22;"}
 </div>
 
 <div style="position:absolute; top:43%; left:78%;" class="fragment fade-in">
@@ -42,7 +42,7 @@ format:
 </div>
 
 <div style="position:absolute; top:66%; left:78%;" class="fragment fade-in">
-  [TN]{style="color:#3ECF72;"}
+  [TN]{style="color:#228B22;"}
 </div>
 
 <div style="position:absolute; top:90%; left:78%;" class="fragment fade-in">
@@ -92,9 +92,19 @@ format:
 
 ## Scoring rules {.background-slide}
 
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-out">
-  - We evaluate predictions $\pi_i(s \mid t)$ against the binary indicator $D_i(t,s) = \mathbf{1}\{t<T_i^*\leq t+s\}$ via $\require{color}\textcolor{#EB589A}{\mathcal{S}(\pi_i(s \mid t),D_i(t,s))}$
+
+<div style="position:absolute; top:13%; left:12%;" class="fragment fade-in-then-out">
+  <img src="images/sr1.svg" style="width:90%; text-align:center;">
 </div>
+
+<div style="position:absolute; top:15%; left:12%;" class="fragment fade-in-then-out">
+  <img src="images/sr2.svg" style="width:90%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:15%; left:12%;" class="fragment fade-in-then-out">
+  <img src="images/sr3.svg" style="width:90%; text-align:center;">
+</div>
+
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - A scoring rule is [proper]{style="color:#EB589A;"} if 
@@ -110,8 +120,8 @@ format:
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
-  - The dynamic BS, LogS and AUC quantify predictive accuracy, but not the consequences of decisions based on predictions 
-  - They do not account for the asymmetric harms of false-positives and false-negatives decisions
+  - They quantify predictive accuracy, but [not the consequences of decisions based on predictions]{style="color:#EB589A;"}
+  - They do not account for the [asymmetric harms of false-positives and false-negatives]{style="color:#EB589A;"} decisions
 </div>
 
 
@@ -128,44 +138,8 @@ format:
   <img src="images/decision_rules.svg" style="width:100%; text-align:center;">
 </div>
 
-
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - We define the [dynamic NB]{style="color:#EB589A;"} 
-$$ \normalsize\require{color}\begin{split}
-        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
-        &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\frac{c}{1-c}
-    \end{split} $$ 
-</div>
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - We define the [dynamic NB]{style="color:#EB589A;"} 
-$$ \normalsize\require{color}\begin{split}
-        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)}\\
-        &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\frac{c}{1-c}
-    \end{split} $$ 
-</div>
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - We define the [dynamic NB]{style="color:#EB589A;"} 
-$$ \normalsize\require{color}\begin{split}
-        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
-        &-\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))}\frac{c}{1-c}
-    \end{split} $$ 
-</div>
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - We define the [dynamic NB]{style="color:#EB589A;"} 
-$$ \normalsize\require{color}\begin{split}
-        \text{NB}_c\big(\pi_i(s\mid t),& D_i(t,s)\big)  =  \mathbf{1}\{\pi_i(s\mid t)\geq c\} D_i(t,s)\\
-        &-\mathbf{1}\{\pi_i(s\mid t)\geq c\}(1- D_i(t,s))\textcolor{#EB589A}{\frac{c}{1-c}}
-    \end{split} $$ 
-</div>
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
@@ -177,6 +151,7 @@ $$ \normalsize\require{color}\begin{split}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
   - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
@@ -188,6 +163,7 @@ $$ \normalsize\require{color}\begin{split}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
   - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
@@ -199,6 +175,7 @@ $$ \normalsize\require{color}\begin{split}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
   - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
@@ -209,6 +186,7 @@ $$ \normalsize\require{color}\begin{split}
 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+  - The most used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
   - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
@@ -281,7 +259,7 @@ $$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- Under LTRC data $D_i(t,s)=\mathbf{1}\{t<T_i^*\leq t+s\}$ is unobserved for $i$ censored within $(t, t+s]$ or $L_i>t$
+- Under LTRC data $D_i(t,s)=\mathbf{1}\{t<T_i^*\leq t+s\}$ is [unobserved]{style="color:#EB589A;"} for $i$ censored within $(t, t+s]$ or $L_i>t$
 
 <img src="images/ltrc1.svg" style="width:63%; display:block; margin:auto;">
 
@@ -369,25 +347,17 @@ $$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \text
 * [Baseline covariates]{style="color:#EB589A;"}: age, previous pregnancy outcomes, smoking status, pre-existent use of antihypertensive agents, diabetes mellitus, etc.
 * We consider [fetal longitudinal biomarkers]{style="color:#EB589A;"}:
   + Pulsatility index of the umbilical artery [($\texttt{PI_UA}$)]{style="color:#EB589A;"}
-  + Pulsatility index of the middle cerebral artery [($\texttt{PI_MCA}$)]{style="color:#EB589A;"}
-  + Estimated fetal weight [($\texttt{EFW}$)]{style="color:#EB589A;"}
-  + Short-term variation in fetal heart rate [($\texttt{STV}$)]{style="color:#EB589A;"}
-* And [maternal longitudinal biomarkers]{style="color:#EB589A;"}:
-  + Systolic blood pressure [($\texttt{sBP}$)]{style="color:#EB589A;"}
+  + Short-term heart-rate variability [($\texttt{STV}$)]{style="color:#EB589A;"}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+- [Linear mixed-effect]{style="color:#EB589A;"} models with natural cubic splines:
+
 $$ \require{color}\scriptsize\begin{cases}
          \texttt{PI_UA}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{1i}(t)$} + \varepsilon_{1i}(t) \\
         &=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1^1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2^1(t,\lambda)  + \varepsilon_{1i}(t),\\
-         \texttt{PI_MCA}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{2i}(t)$} + \varepsilon_{2i}(t) \\
-         & = (\beta_0^2 + b_{0i}^2) + (\beta_{1}^2 + b_{1i}^2)B_1^2(t,\lambda) +  (\beta_{2}^2 + b_{2i}^2)B_2^2(t,\lambda)  + \varepsilon_{2i}(t),\\
-          \texttt{EFW}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{3i}(t)$} + \varepsilon_{3i}(t) \\
-        & =(\beta_0^3 + b_{0i}^3) + \sum_{j=1}^3(\beta_{j}^3 + b_{ji}^3)B_j^3(t,\lambda)  + \varepsilon_{3i}(t),\\
         \log(\texttt{STV}_i(t)) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{4i}(t)$} + \varepsilon_{4i}(t)\\
-        & = (\beta_0^4 + b_{0i}^4) + (\beta_{1}^4 + b_{1i}^4)B_1^4(t,\lambda) +  (\beta_{2}^4 + b_{2i}^4)B_2^4(t,\lambda)  + \varepsilon_{4i}(t),\\
-        \texttt{sBP}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{5i}(t)$} + \varepsilon_{5i}(t)\\
-        & = (\beta_0^5 + b_{0i}^5) + \sum_{j=1}^3(\beta_{j}^5 + b_{ji}^5)B_j^5(t,\lambda)   + \varepsilon_{5i}(t),
+        & = (\beta_0^4 + b_{0i}^4) + (\beta_{1}^4 + b_{1i}^4)B_1^4(t,\lambda) +  (\beta_{2}^4 + b_{2i}^4)B_2^4(t,\lambda)  + \varepsilon_{4i}(t)
     \end{cases}$$
 </div>
 
