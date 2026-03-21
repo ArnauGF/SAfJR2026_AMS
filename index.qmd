@@ -195,7 +195,7 @@ $$ \normalsize\require{color}\begin{split}
     \end{split} $$ 
 </div>
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-in}
 
 - NB and EC rely on a [single decision threshold]{style="color:#EB589A;"}  $c\in (0,1)$
 
@@ -205,13 +205,7 @@ $$ \normalsize\require{color}\begin{split}
 
 :::
 
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
-  - Decision curves allow [multiple $c$'s]{style="color:#EB589A;"} , but they are [not scoring rules]{style="color:#EB589A;"} 
-</div>
 
-<div style="position:absolute; top:30%; left:12%;" class="fragment fade-in">
-  <img src="images/dc_expl_CV_transp.svg" style="width:85%; text-align:center;">
-</div>
 
 
 
