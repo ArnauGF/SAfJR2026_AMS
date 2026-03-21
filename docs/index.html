@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-inputbd148b17c541920</title>
+  <title>quarto-input3baeebe07d46f7ba</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -301,7 +301,7 @@
 </div>
 <div class="fragment fade-in-then-out">
 <ul>
-<li>NB and EC rely on a single decision threshold <span class="math inline">\(c\in (0,1)\)</span></li>
+<li>NB and EC rely on a <span style="color:#EB589A;">single decision threshold</span> <span class="math inline">\(c\in (0,1)\)</span></li>
 </ul>
 <center>
 <img src="images/table2.svg" width="75%">
@@ -309,7 +309,7 @@
 </div>
 <div class="fragment fade-in" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li>Decision curves allow multiple <span class="math inline">\(c\)</span>’s, but they are not scoring rules</li>
+<li>Decision curves allow <span style="color:#EB589A;">multiple <span class="math inline">\(c\)</span>’s</span> , but they are <span style="color:#EB589A;">not scoring rules</span></li>
 </ul>
 </div>
 <div class="fragment fade-in" style="position:absolute; top:30%; left:12%;">
@@ -334,6 +334,15 @@
 <p><span class="math display">\[\normalsize\require{color}\begin{split} &amp; \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ &amp; \textcolor{#EB589A}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#EB589A}{w(c)dc} \end{split} \]</span></p>
 <ul>
 <li><span class="math inline">\(w(\cdot)\)</span> is a positive weight function reflecting the <span style="color:#EB589A;">clinical relevance of different <span class="math inline">\(c\)</span>’s</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li>To avoid reliance on a single <span class="math inline">\(c\)</span> and achieve strict properness we define the <span style="color:#EB589A;">IWEC</span></li>
+</ul>
+<p><span class="math display">\[\normalsize\require{color}\begin{split} &amp; \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ &amp; \textcolor{#EB589A}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#EB589A}{w(c)dc} \end{split} \]</span></p>
+<ul>
+<li>We consider the <span style="color:#EB589A;">Beta family</span> of weight functions <span style="color:#EB589A;"><span class="math inline">\(w(c;\alpha,\beta)\)</span></span></li>
 </ul>
 </div>
 <div class="fragment fade-in-then-out">
@@ -370,7 +379,7 @@
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li>Under LTRC data <span class="math inline">\(D_i(t,s)=\mathbf{1}\{t&lt;T_i^*\leq t+s\}\)</span> is unobserved for <span class="math inline">\(i\)</span> censored within <span class="math inline">\((t, t+s]\)</span> or <span class="math inline">\(L_i&gt;t\)</span></li>
+<li>Under LTRC data <span class="math inline">\(D_i(t,s)=\mathbf{1}\{t&lt;T_i^*\leq t+s\}\)</span> is <span style="color:#EB589A;">unobserved</span> for <span class="math inline">\(i\)</span> censored within <span class="math inline">\((t, t+s]\)</span> or <span class="math inline">\(L_i&gt;t\)</span></li>
 </ul>
 <p><img src="images/ltrc2.png" style="width:63%; display:block; margin:auto;"></p>
 </div>
@@ -433,9 +442,34 @@
 </ul>
 </div>
 </section>
+<section id="simulation-study" class="slide level2 background-slide">
+<h2>Simulation study</h2>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li>We <span style="color:#EB589A;">evaluate dynamic predictions</span> within <span class="math inline">\((1,3]\)</span> obtained via three Cox proportional-hazards models:
+<ul>
+<li>The true model <span class="math inline">\(\longrightarrow\)</span> <span style="color:#EB589A;"><span class="math inline">\(M_\text{True}\)</span></span></li>
+<li>Two misspecified models <span class="math inline">\(\longrightarrow\)</span> <span style="color:#EB589A;"><span class="math inline">\(M_1, M_2\)</span></span></li>
+</ul></li>
+<li>To reflect the <span style="color:#EB589A;">asymmetry between FP and FN</span> in clinical context, we set <span style="color:#EB589A;"><span class="math inline">\(c\in(0.1, 0.3)\)</span></span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
+<p><img src="images/w1.png" style="width:85%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
+<p><img src="images/w2.png" style="width:85%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
+<p><img src="images/w3.png" style="width:85%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
+<p><img src="images/ws.png" style="width:85%; text-align:center;"></p>
+</div>
+</section>
 <section id="application-opticore" class="slide level2 background-slide">
 <h2>Application: OPTICORE</h2>
-<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%; font-size:0.85em;">
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
 <li><span style="color:#EB589A;">Baseline covariates</span>: age, previous pregnancy outcomes, smoking status, pre-existent use of antihypertensive agents, diabetes mellitus, etc.</li>
 <li>We consider <span style="color:#EB589A;">fetal longitudinal biomarkers</span>:
@@ -458,13 +492,11 @@
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li>We fit five <span style="color:#EB589A;">joint models</span> using the baseline data and the longitudinal submodels:</li>
+<li>Shared-parameter <span style="color:#EB589A;">joint models</span> using the same baseline data <span class="math inline">\(\boldsymbol{X}_i\)</span> and the longitudinal submodels:</li>
 </ul>
 <p><span class="math display">\[\scriptsize\begin{cases}
-M1: &amp; h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_1\colorbox{#D2691E}{$\color{white}m_{1i}(t_{ij})$} \big) \\
-M2: &amp; h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_2\colorbox{#D2691E}{$\color{white}m_{2i}(t_{ij})$} \big) \\
-M3: &amp; h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_3\colorbox{#D2691E}{$\color{white}m_{3i}(t_{ij})$} \big) \\
-M4: &amp; h_{i}\left(t \mid \colorbox{#D2691E}{$\color{white}\boldsymbol{\mathcal{Y}}_{i}(t)$}, \colorbox{#2E8B57}{$\color{white}\boldsymbol{w}_{i}$}\right) =h_{0}(t) \exp \big(  \colorbox{#2E8B57}{$\color{white}\gamma\texttt{drug}_i$}+ \alpha_4\colorbox{#D2691E}{$\color{white}m_{4i}(t_{ij})$} \big)
+\textcolor{#EB589A}{\text{JM}_{\text{PI_UA}}}: &amp; h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_1\colorbox{#EB589A}{$\color{#FBE1EE}\frac{m_{1i}(t) - m_{1i}(t-7)}{7}$} \big) \\
+\textcolor{#EB589A}{\text{JM}_{\text{STV}}}: &amp; h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_2\colorbox{#EB589A}{$\color{#FBE1EE}\int_{t-7}^tm_{2i}(s)ds$} \big)
 \end{cases}\]</span></p>
 </div>
 
