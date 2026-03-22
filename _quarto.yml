@@ -8,6 +8,7 @@ format:
     slide-number: true
     transition: fade
     navigation-mode: linear
+    pdf-separate-fragments: true
 
 resources:
   - images/
