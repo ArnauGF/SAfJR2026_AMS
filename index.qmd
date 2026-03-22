@@ -262,6 +262,7 @@ $$ \normalsize\require{color}\begin{split}
 - To [estimate]{style="color:#EB589A;"}:
 
 $$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>t\big]$$
+
 - We propose a nonparametric IPW estimator [$\widehat{\text{eIWEC}_w}(t,s)$]{style="color:#EB589A;"}, tailored to LTRC data
 - We established its [consistency]{style="color:#EB589A;"} and [asymptotic normality]{style="color:#EB589A;"}
 </div>
@@ -366,7 +367,7 @@ $$\scriptsize\begin{cases}
 
 
 
-## Contribution of the work {.background-slide}
+## Contribution {.background-slide}
 
 ::: {.fragment .fade-in-then-out}
 
@@ -381,14 +382,15 @@ $$\scriptsize\begin{cases}
 
 :::
 
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
-- [Limitations]{style="color:#EB589A;"}:
-  + Assumption of [covariate independence]{style="color:#EB589A;"} from truncation and censoring
-  + Reducing the time-to-event outcome to a [binary outcome]{style="color:#EB589A;"} discards relevant information 
-</div>
+## Limitations {.background-slide}
+
+- Reducing the time-to-event outcome to a [binary outcome]{style="color:#EB589A;"} discards relevant information 
+- Assumption of [covariate independence]{style="color:#EB589A;"} from truncation and censoring
+
 
 
 ## { data-state="cover-slide" data-background-image="images/contra.png" data-background-size="cover" visibility="uncounted"}
+
 
 ## IPW estimator {.background-slide visibility="uncounted"}
 
