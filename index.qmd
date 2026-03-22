@@ -453,7 +453,7 @@ $$\scriptsize\begin{cases}
 
 - [Extension of clinical utility measures]{style="color:#EB589A;"} (NB and EC) to dynamic prediction
 - [Dynamic IWEC]{style="color:#EB589A;"} definition and [weighted decision curves]{style="color:#EB589A;"}
-- [IPW estimator]{style="color:#EB589A;"} tailored to [LRTC data]{style="color:#EB589A;"} 
+- [IPW estimator]{style="color:#EB589A;"} tailored to [LTRC data]{style="color:#EB589A;"} 
 - All methods will be available in the [JMbayes2 R package]{style="color:#EB589A;"}
 
 <center>
