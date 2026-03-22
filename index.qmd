@@ -401,7 +401,7 @@ $$ \require{color}\scriptsize\begin{cases}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- Shared-parameter [joint models]{style="color:#EB589A;"} using the same baseline data $\boldsymbol{X}_i$ and the longitudinal submodels:
+- Shared-parameter [joint models]{style="color:#EB589A;"} using the same baseline data $\boldsymbol{X}_i$ and the two longitudinal submodels:
 
 $$\scriptsize\begin{cases} 
 \textcolor{#EB589A}{\text{JM}_{\text{PI_UA}}}: & h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_1\colorbox{#EB589A}{$\color{#FBE1EE}\frac{m_{1i}(t) - m_{1i}(t-7)}{7}$} \big) \\
