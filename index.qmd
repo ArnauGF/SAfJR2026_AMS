@@ -50,16 +50,6 @@ format:
 </div>
 
 
-## Challenges of the data {.background-slide}
-
--   CCS cannot be administered until the fetus reaches [$500$ grams]{style="color:#EB589A;"} and a gestational age of [$168$ days]{style="color:#EB589A;"} ($24$ weeks)
-
-<div style="position:absolute; top:37%; left:12%;">
-  <img src="images/LT2.svg" style="width:90%; text-align:center;">
-</div>
-
-
-
 
 ## Definitions and notation {.background-slide}
 
@@ -391,6 +381,14 @@ $$\scriptsize\begin{cases}
 
 ## { data-state="cover-slide" data-background-image="images/contra.png" data-background-size="cover" visibility="uncounted"}
 
+
+## Challenges of the data {.background-slide visibility="uncounted"}
+
+-   CCS cannot be administered until the fetus reaches [$500$ grams]{style="color:#EB589A;"} and a gestational age of [$168$ days]{style="color:#EB589A;"} ($24$ weeks)
+
+<div style="position:absolute; top:37%; left:12%;">
+  <img src="images/LT2.svg" style="width:90%; text-align:center;">
+</div>
 
 ## IPW estimator {.background-slide visibility="uncounted"}
 

@@ -14,13 +14,6 @@
     "text": "Asymmetric misclassification\n\n\n\n\nTP\n\n\nFP\n\n\nTN\n\n\nFN"
   },
   {
-    "objectID": "index.html#challenges-of-the-data",
-    "href": "index.html#challenges-of-the-data",
-    "title": "",
-    "section": "Challenges of the data",
-    "text": "Challenges of the data\n\nCCS cannot be administered until the fetus reaches \\(500\\) grams and a gestational age of \\(168\\) days (\\(24\\) weeks)"
-  },
-  {
     "objectID": "index.html#definitions-and-notation",
     "href": "index.html#definitions-and-notation",
     "title": "",
@@ -82,6 +75,13 @@
     "title": "",
     "section": "Limitations",
     "text": "Limitations\n\nReducing the time-to-event outcome to a binary outcome discards relevant information\nAssumption of covariate independence from truncation and censoring"
+  },
+  {
+    "objectID": "index.html#challenges-of-the-data",
+    "href": "index.html#challenges-of-the-data",
+    "title": "",
+    "section": "Challenges of the data",
+    "text": "Challenges of the data\n\nCCS cannot be administered until the fetus reaches \\(500\\) grams and a gestational age of \\(168\\) days (\\(24\\) weeks)"
   },
   {
     "objectID": "index.html#ipw-estimator",
