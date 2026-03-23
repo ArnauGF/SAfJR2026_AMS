@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-input8023c289b3aa42e9</title>
+  <title>quarto-inputd1fdeab3941fe80e</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -134,7 +134,7 @@
 <h2>Motivation</h2>
 <div class="fragment fade-out" style="position:absolute; top:12%; left:0%;">
 <ul>
-<li><span style="color:#EB589A;">Evaluate dynamic predictions</span> of imminent delivery in pregnancies complicated by early-onset fetal growth restriction (FGR)</li>
+<li><span style="color:#EB589A;">Evaluate dynamic predictions</span> of imminent delivery in pregnancies complicated by early-onset fetal growth restriction</li>
 <li><span style="color:#EB589A;">Main goal</span>: optimizing antenatal corticosteroid (CCS) administration</li>
 </ul>
 </div>
@@ -169,12 +169,13 @@
 <h2>Definitions and notation</h2>
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:0%;">
 <ul>
+<li><span class="math inline">\(i=1,\dotsc,n\)</span> individuals</li>
 <li><span class="math inline">\(\require{color}\textcolor{#EB589A}{T_1^*,\dots, T_n^*}\)</span> true time until event</li>
 <li><span class="math inline">\(\require{color}\textcolor{#EB589A}{C_1,\dots, C_n}\)</span> right-censoring times</li>
+<li><span class="math inline">\(\require{color}\textcolor{#EB589A}{T_i=\min(T_i^*, C_i)}\)</span> observed times</li>
+<li><span class="math inline">\(\require{color}\textcolor{#EB589A}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}\)</span> censoring indicator</li>
 <li><span class="math inline">\(\require{color}\textcolor{#EB589A}{L_1,\dots, L_n}\)</span> left-truncation times</li>
-<li><span class="math inline">\(\require{color}\textcolor{#EB589A}{T_i=\min(T_i^*, C_i)}\)</span> observed times, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
-<li><span class="math inline">\(\require{color}\textcolor{#EB589A}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}\)</span> censoring indicator, <span class="math inline">\(i=1,\dotsc,n\)</span></li>
-<li><span class="math inline">\(\require{color}\textcolor{#EB589A}{\boldsymbol{\mathcal{H}}_i(t)}\)</span> available history at time <span class="math inline">\(t\)</span>, including baseline and time-dependent covarites</li>
+<li><span class="math inline">\(\require{color}\textcolor{#EB589A}{\boldsymbol{\mathcal{H}}_i(t)}\)</span> available history at time <span class="math inline">\(t\)</span></li>
 </ul>
 </div>
 <div class="fragment fade-in" style="position:absolute; top:12%; left:0%;">
@@ -210,24 +211,46 @@
 <p><span class="math display">\[ E\left[\mathcal{S}\big(\pi_i^{\text{true}}(s\mid t), D_i(t,s)\big) \right] \leq E\left[\mathcal{S}\big(\widehat{\pi}_i(s\mid t), D_i(t,s)\big) \right] \]</span></p>
 <ul>
 <li>It is <span style="color:#EB589A;">strictly proper</span> if it holds with equality if and only if <span class="math inline">\(\pi_i^{\text{true}}(s\mid t)\equiv \widehat{\pi}_i(s\mid t)\)</span></li>
+</ul>
+<div style="height:10px;">
+
+</div>
+<ul>
 <li>It is <span style="color:#EB589A;">centered</span> if <span class="math inline">\(\mathcal{S}(1,1)=\mathcal{S}(0,0)=0\)</span></li>
 </ul>
 </div>
-<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:20%;">
-<p><img src="images/table1.svg" style="width:75%; text-align:center;"></p>
+<div class="fragment fade-in-then-out" style="position:absolute; top:18%; left:10%;">
+<p><img src="images/table1.svg" style="width:100%; text-align:center;"></p>
 </div>
-<div class="fragment fade-in" style="position:absolute; top:13%; left:0%;">
+</section>
+<section id="scoring-rules-limitations" class="slide level2 background-slide">
+<h2>Scoring rules: limitations</h2>
+<div style="height:15px;">
+
+</div>
 <ul>
 <li>They quantify predictive accuracy, but <span style="color:#EB589A;">not the consequences of decisions based on predictions</span></li>
+</ul>
+<div style="height:10px;">
+
+</div>
+<ul>
 <li>They do not account for the <span style="color:#EB589A;">asymmetric harms of false-positives and false-negatives</span> decisions</li>
 </ul>
-</div>
 </section>
 <section id="clinical-utility" class="slide level2 background-slide">
 <h2>Clinical utility</h2>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<div style="height:15px;">
+
+</div>
 <ul>
 <li>Focus on the <span style="color:#EB589A;">quality of decisions</span> driven by dynamic predictions</li>
+</ul>
+<div style="height:10px;">
+
+</div>
+<ul>
 <li>Based on a clinically relevant <span style="color:#EB589A;">decision threshold</span> <span class="math inline">\(c\in(0,1)\)</span></li>
 </ul>
 </div>
@@ -236,11 +259,11 @@
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li>The most used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
+<li>A widely used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
 <li>A similar metric is the <span style="color:#EB589A;">expected cost (EC)</span></li>
 <li>We define the <span style="color:#EB589A;">dynamic EC</span> <span class="math display">\[ \normalsize\require{color}\begin{split}
     \begin{split}
-    \text{EC}_c\big(\pi_i(s\mid t),&amp;D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+    \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = &amp; c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
     &amp;+(1-c)\mathbf{1}\{\pi_i(s\mid t)&lt; c\}D_i(t,s)
 \end{split}
 \end{split} \]</span></li>
@@ -248,11 +271,11 @@
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li>The most used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
+<li>A widely used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
 <li>A similar metric is the <span style="color:#EB589A;">expected cost (EC)</span></li>
 <li>We define the <span style="color:#EB589A;">dynamic EC</span> <span class="math display">\[ \normalsize\require{color}\begin{split}
     \begin{split}
-    \text{EC}_c\big(\pi_i(s\mid t),&amp;D_i(t,s)\big) = c\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+    \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = &amp; c\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
     &amp;+(1-c)\mathbf{1}\{\pi_i(s\mid t)&lt; c\}D_i(t,s)
 \end{split}
 \end{split} \]</span></li>
@@ -260,11 +283,11 @@
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li>The most used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
+<li>A widely used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
 <li>A similar metric is the <span style="color:#EB589A;">expected cost (EC)</span></li>
 <li>We define the <span style="color:#EB589A;">dynamic EC</span> <span class="math display">\[ \normalsize\require{color}\begin{split}
     \begin{split}
-    \text{EC}_c\big(\pi_i(s\mid t),&amp;D_i(t,s)\big) = \textcolor{#EB589A}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+    \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = &amp; \textcolor{#EB589A}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
     &amp;+(1-c)\mathbf{1}\{\pi_i(s\mid t)&lt; c\}D_i(t,s)
 \end{split}
 \end{split} \]</span></li>
@@ -272,31 +295,31 @@
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li>The most used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
+<li>A widely used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
 <li>A similar metric is the <span style="color:#EB589A;">expected cost (EC)</span></li>
 <li>We define the <span style="color:#EB589A;">dynamic EC</span> <span class="math display">\[ \normalsize\require{color}\begin{split}
-    \text{EC}_c\big(\pi_i(s\mid t),&amp;D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+    \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = &amp; c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
     &amp;+(1-c)\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)&lt; c\}D_i(t,s)}
 \end{split} \]</span></li>
 </ul>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li>The most used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
+<li>A widely used clinical utility metric is the <span style="color:#EB589A;">net benefit (NB)</span></li>
 <li>A similar metric is the <span style="color:#EB589A;">expected cost (EC)</span></li>
 <li>We define the <span style="color:#EB589A;">dynamic EC</span> <span class="math display">\[ \normalsize\require{color}\begin{split}
-    \text{EC}_c\big(\pi_i(s\mid t),&amp;D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+    \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = &amp; c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
     &amp;+\textcolor{#EB589A}{(1-c)\mathbf{1}\{\pi_i(s\mid t)&lt; c\}D_i(t,s)}
 \end{split} \]</span></li>
 </ul>
 </div>
-<div class="fragment fade-in">
+<div class="fragment fade-in" style="position:absolute; top:13%; left:10%;">
+<p><img src="images/table2.svg" style="width:90%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:80%; left:0%;">
 <ul>
 <li>NB and EC rely on a <span style="color:#EB589A;">single decision threshold</span> <span class="math inline">\(c\in (0,1)\)</span></li>
 </ul>
-<center>
-<img src="images/table2.svg" width="75%">
-</center>
 </div>
 </section>
 <section id="integrated-weighted-expected-cost" class="slide level2 background-slide">
@@ -325,16 +348,16 @@
 </ul>
 <p><span class="math display">\[\normalsize\require{color}\begin{split} &amp; \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ &amp; \textcolor{#EB589A}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#EB589A}{w(c)dc} \end{split} \]</span></p>
 <ul>
-<li>We consider the <span style="color:#EB589A;">Beta family</span> of weight functions <span style="color:#EB589A;"><span class="math inline">\(w(c;\alpha,\beta)\)</span></span></li>
+<li>We consider the <span style="color:#EB589A;">beta family</span> of weight functions <span style="color:#EB589A;"><span class="math inline">\(w(c;\alpha,\beta)\)</span></span></li>
 </ul>
 </div>
 <div class="fragment fade-in-then-out">
+<center>
+<img src="images/table3.svg" width="75%">
+</center>
 <ul>
 <li>We rely on a weight function, <span style="color:#EB589A;">considering all thresholds</span> <span class="math inline">\(c\in (0,1)\)</span> and its <span style="color:#EB589A;">relative clinical importance</span></li>
 </ul>
-<center>
-<img src="images/table_IWEC.svg" width="75%">
-</center>
 </div>
 <div class="fragment fade-in" style="position:absolute; top:13%; left:0%;">
 <ul>
@@ -354,7 +377,7 @@
 </ul>
 <p><span class="math display">\[\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*&gt;t\big]\]</span></p>
 <ul>
-<li>We propose a nonparametric IPW estimator <span style="color:#EB589A;"><span class="math inline">\(\widehat{\text{eIWEC}_w}(t,s)\)</span></span>, tailored to LTRC data</li>
+<li>We propose a nonparametric IPW estimator <span style="color:#EB589A;"><span class="math inline">\(\widehat{\text{eIWEC}_w}(t,s)\)</span></span>, tailored to <span style="color:#EB589A;">LTRC</span> data</li>
 <li>We established its <span style="color:#EB589A;">consistency</span> and <span style="color:#EB589A;">asymptotic normality</span></li>
 </ul>
 </div>
@@ -383,8 +406,11 @@
 <div class="fragment fade-in-then-out" style="position:absolute; top:10%; left:12%;">
 <p><img src="images/ws_l.png" style="width:85%; text-align:center;"></p>
 </div>
-<div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
-<p><img src="images/barplots.png" style="width:100%; text-align:center;"></p>
+<div class="fragment fade-in" style="position:absolute; top:12%; left:0%;">
+<p><img src="images/plot_left.png" style="width:48%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:15%; left:50%;">
+<p><img src="images/plot_right.png" style="width:150%; text-align:center;"></p>
 </div>
 </section>
 <section id="application-opticore" class="slide level2 background-slide">
@@ -401,37 +427,38 @@
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li><span style="color:#EB589A;">Linear mixed-effect</span> models with natural cubic splines:</li>
+<li><span style="color:#EB589A;">Linear mixed-effects</span> submodels:</li>
 </ul>
 <p><span class="math display">\[ \require{color}\scriptsize\begin{cases}
          \texttt{PI_UA}_i(t) &amp; = \colorbox{#EB589A}{$\color{#FBE1EE}m_{1i}(t)$} + \varepsilon_{1i}(t) \\
-        &amp;=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1^1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2^1(t,\lambda)  + \varepsilon_{1i}(t),\\
+        &amp;=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1^1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2^1(t,\lambda)  + \varepsilon_{1i}(t)\\
+        \\
         \log(\texttt{STV}_i(t)) &amp; = \colorbox{#EB589A}{$\color{#FBE1EE}m_{2i}(t)$} + \varepsilon_{2i}(t)\\
         &amp; = (\beta_0^2 + b_{0i}^2) + (\beta_{1}^2 + b_{1i}^2)B_1^2(t,\lambda) +  (\beta_{2}^2 + b_{2i}^2)B_2^2(t,\lambda)  + \varepsilon_{2i}(t)
-    \end{cases}\]</span></p>
+    \end{cases},\]</span></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
 <li>Shared-parameter <span style="color:#EB589A;">joint models</span> using the same baseline data <span class="math inline">\(\boldsymbol{X}_i\)</span> and the two longitudinal submodels:</li>
 </ul>
-<p><span class="math display">\[\scriptsize\begin{cases}
-\textcolor{#EB589A}{\text{JM}_{\text{PI_UA}}}: &amp; h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_1\colorbox{#EB589A}{$\color{#FBE1EE}\frac{m_{1i}(t) - m_{1i}(t-7)}{7}$} \big) \\
-\textcolor{#EB589A}{\text{JM}_{\text{STV}}}: &amp; h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_2\colorbox{#EB589A}{$\color{#FBE1EE}\int_{t-7}^tm_{2i}(s)ds$} \big)
-\end{cases}\]</span></p>
+<p><span class="math display">\[\scriptsize\begin{split}
+\textcolor{#EB589A}{\text{JM}_{\text{PI_UA}}}: &amp; h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_1\colorbox{#EB589A}{$\color{#FBE1EE}\frac{m_{1i}(t) - m_{1i}(t-7)}{7}$} \big) \\
+\textcolor{#EB589A}{\text{JM}_{\text{STV}}}: &amp; h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_2\colorbox{#EB589A}{$\color{#FBE1EE}\frac{1}{7}\int_{t-7}^tm_{2i}(s)ds$} \big)
+\end{split}\]</span></p>
 <ul>
 <li>We evaluate <span style="color:#EB589A;">dynamic predictions</span> within <span class="math inline">\((200, 207]\)</span> days of gestation. We still consider <span style="color:#EB589A;"><span class="math inline">\(c\in(0.1,0.3)\)</span></span>, we use <span style="color:#EB589A;"><span class="math inline">\(w(c;5.16, 17.62)\)</span></span></li>
 </ul>
 </div>
-<div class="fragment fade-in-then-out">
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
 <li>We extend the classical decision curve analysis by defining <span style="color:#EB589A;">weighted decision curves</span></li>
 </ul>
-<center>
-<img src="images/dcs1.png" width="75%">
-</center>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
-<p><img src="images/wdcs1.png" style="width:100%; text-align:center;"></p>
+<p><img src="images/decision_one.png" style="width:100%; text-align:center;"></p>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
+<p><img src="images/decision_two.png" style="width:100%; text-align:center;"></p>
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:12%; left:8%;">
 <p><img src="images/wdcs4.png" style="width:100%; text-align:center;"></p>

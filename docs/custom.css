@@ -78,3 +78,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.reveal .progress span {
+  background: #EB589A;
+}
