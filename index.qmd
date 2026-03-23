@@ -148,7 +148,7 @@ format:
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = & c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) =  c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
     \end{split}
     \end{split} $$ 
@@ -160,7 +160,7 @@ $$ \normalsize\require{color}\begin{split}
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = & c\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = c\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
     \end{split}
     \end{split} $$ 
@@ -172,7 +172,7 @@ $$ \normalsize\require{color}\begin{split}
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = & \textcolor{#EB589A}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = \textcolor{#EB589A}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
     \end{split}
     \end{split} $$ 
@@ -183,7 +183,7 @@ $$ \normalsize\require{color}\begin{split}
   - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = & c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
         &+(1-c)\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
     \end{split} $$ 
 </div>
@@ -194,7 +194,7 @@ $$ \normalsize\require{color}\begin{split}
   - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
   - We define the [dynamic EC]{style="color:#EB589A;"} 
 $$ \normalsize\require{color}\begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),\, D_i(t,s)\big) = & c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
+        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
         &+\textcolor{#EB589A}{(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
     \end{split} $$ 
 </div>
